@@ -17,7 +17,7 @@
             <asp:TemplateField HeaderText="Hành Động">
                 <ItemTemplate>
                     <a href='Edit_User.aspx?id=<%# Eval("id") %>' class="btn btn-primary btn-sm">Sửa</a>
-                    <a href='Delete_User.aspx?id=<%# Eval("id") %>' class="btn btn-danger btn-sm">Xóa</a>
+                    <a href='Delete_User.aspx?id=<%# Eval("id") %>' class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc muốn xóa người dùng này?');">Xóa</a>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

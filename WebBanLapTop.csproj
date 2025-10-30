@@ -53,6 +53,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Category\Category.aspx" />
+    <Content Include="Admin\Category\Create_Category.aspx" />
+    <Content Include="Admin\Category\Delete_Category.aspx" />
+    <Content Include="Admin\Category\Edit_Category.aspx" />
     <Content Include="Admin\User\Create_User.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\User\Delete_User.aspx" />
@@ -72,6 +76,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Category\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category\Create_Category.aspx.cs">
+      <DependentUpon>Create_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Create_Category.aspx.designer.cs">
+      <DependentUpon>Create_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category\Delete_Category.aspx.cs">
+      <DependentUpon>Delete_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Delete_Category.aspx.designer.cs">
+      <DependentUpon>Delete_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category\Edit_Category.aspx.cs">
+      <DependentUpon>Edit_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category\Edit_Category.aspx.designer.cs">
+      <DependentUpon>Edit_Category.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\User\Create_User.aspx.cs">
       <DependentUpon>Create_User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -130,9 +162,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\Category\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

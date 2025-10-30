@@ -73,7 +73,7 @@
                 <!-- Sidebar menu -->
                 <a href="/Admin/Dashboard.aspx" class="list-group-item list-group-item-action">Bảng điều khiển</a>
                 <a href="/Admin/User/User.aspx" class="list-group-item list-group-item-action">Quản lý người dùng</a>
-                <a href="../orders-admins/show-orders.html" class="list-group-item list-group-item-action">Quản lý danh mục</a>
+                <a href="/Admin/Category/Category.aspx" class="list-group-item list-group-item-action">Quản lý danh mục</a>
                 <a href="../foods-admins/show-foods.html" class="list-group-item list-group-item-action">Quản lý đơn hàng</a>
                 <a href="../bookings-admins/show-bookings.html" class="list-group-item list-group-item-action">Quản lý sản phẩm</a>
             </div>
