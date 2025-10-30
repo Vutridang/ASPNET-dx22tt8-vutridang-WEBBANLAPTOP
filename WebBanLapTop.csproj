@@ -57,6 +57,10 @@
     <Content Include="Admin\Category\Create_Category.aspx" />
     <Content Include="Admin\Category\Delete_Category.aspx" />
     <Content Include="Admin\Category\Edit_Category.aspx" />
+    <Content Include="Admin\Product\Create_Product.aspx" />
+    <Content Include="Admin\Product\Delete_Product.aspx" />
+    <Content Include="Admin\Product\Edit_Product.aspx" />
+    <Content Include="Admin\Product\Product.aspx" />
     <Content Include="Admin\User\Create_User.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\User\Delete_User.aspx" />
@@ -103,6 +107,34 @@
     </Compile>
     <Compile Include="Admin\Category\Edit_Category.aspx.designer.cs">
       <DependentUpon>Edit_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product\Create_Product.aspx.cs">
+      <DependentUpon>Create_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\Create_Product.aspx.designer.cs">
+      <DependentUpon>Create_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product\Delete_Product.aspx.cs">
+      <DependentUpon>Delete_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\Delete_Product.aspx.designer.cs">
+      <DependentUpon>Delete_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product\Edit_Product.aspx.cs">
+      <DependentUpon>Edit_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\Edit_Product.aspx.designer.cs">
+      <DependentUpon>Edit_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\User\Create_User.aspx.cs">
       <DependentUpon>Create_User.aspx</DependentUpon>
@@ -162,7 +194,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

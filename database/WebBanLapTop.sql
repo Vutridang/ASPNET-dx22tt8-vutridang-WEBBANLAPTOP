@@ -72,11 +72,11 @@ INSERT INTO [user] (username, password, email, role) VALUES
 
 -- Product
 INSERT INTO product (category_id, name, description, price, stock, image_url) VALUES
-(1, 'Asus ROG Strix G15', 'Laptop gaming hiệu năng cao', 2500.00, 10, '/images/asus_rog_g15.jpg'),
-(1, 'MSI Katana GF66', 'Laptop gaming tầm trung', 1800.00, 15, '/images/msi_katana_gf66.jpg'),
-(2, 'Dell XPS 13', 'Ultrabook mỏng nhẹ cao cấp', 2200.00, 8, '/images/dell_xps13.jpg'),
-(2, 'HP Spectre x360', 'Ultrabook 2-in-1 tiện dụng', 2100.00, 5, '/images/hp_spectre_x360.jpg'),
-(3, 'Lenovo ThinkPad X1 Carbon', 'Laptop doanh nhân bền bỉ', 2400.00, 7, '/images/thinkpad_x1_carbon.jpg');
+(1, N'Asus ROG Strix G15', N'Laptop gaming hiệu năng cao', 2500000, 10, '/images/asus_rog_g15.jpg'),
+(1, N'MSI Katana GF66', N'Laptop gaming tầm trung', 1800000, 15, '/images/msi_katana_gf66.jpg'),
+(2, N'Dell XPS 13', N'Ultrabook mỏng nhẹ cao cấp', 2200000, 8, '/images/dell_xps13.jpg'),
+(2, N'HP Spectre x360', N'Ultrabook 2-in-1 tiện dụng', 2100000, 5, '/images/hp_spectre_x360.jpg'),
+(3, N'Lenovo ThinkPad X1 Carbon', N'Laptop doanh nhân bền bỉ', 2400000, 7, '/images/thinkpad_x1_carbon.jpg');
 
 -- Order
 INSERT INTO [order] (user_id, total_amount, status) VALUES
