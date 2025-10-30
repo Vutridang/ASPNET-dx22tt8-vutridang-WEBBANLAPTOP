@@ -17,7 +17,7 @@ namespace WebBanLapTop.Admin
 			// Nếu đã login, tự động chuyển đến Dashboard
 			if (Session["AdminUser"] != null)
 			{
-				Response.Redirect("Dashboard.aspx");
+				Response.Redirect("~/Admin/Dashboard.aspx");
 			}
 		}
 

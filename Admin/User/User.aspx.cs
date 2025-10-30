@@ -15,7 +15,7 @@ namespace WebBanLapTop.Admin
 			// ✅ Chặn truy cập nếu chưa đăng nhập
 			if (Session["AdminUser"] == null)
 			{
-				Response.Redirect("Login.aspx");
+				Response.Redirect("~/Admin/Login.aspx");
 				return;
 			}
 

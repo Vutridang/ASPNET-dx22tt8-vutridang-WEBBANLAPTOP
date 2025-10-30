@@ -33,7 +33,7 @@ namespace WebBanLapTop.Admin
 		protected void lnkLogout_Click(object sender, EventArgs e)
 		{
 			Session.Clear(); // Xóa session
-			Response.Redirect("Login.aspx");
+			Response.Redirect("~/Admin/Login.aspx");
 		}
 	}
 }
