@@ -7,64 +7,64 @@
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\create_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\create_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\edit_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\edit_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\delete_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\delete_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\edit_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\edit_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\edit_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\delete_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\delete_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\delete_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\create_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\create_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\create_user.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\create_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\create_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\create_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\create_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\create_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\delete_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\delete_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\delete_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\delete_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\delete_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\edit_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\user\\edit_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\edit_user.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\user\\edit_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\user\\edit_user.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\dashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,7 +75,7 @@
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\dashboard.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\webbanlaptop\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\dashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -115,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Site.Master.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\Site.Master.cs",
               "RelativeDocumentMoniker": "Admin\\Site.Master.cs",
@@ -123,12 +123,11 @@
               "RelativeToolTip": "Admin\\Site.Master.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T09:31:32.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T09:31:32.802Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "User.aspx.designer.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\User.aspx.designer.cs",
               "RelativeDocumentMoniker": "Admin\\User\\User.aspx.designer.cs",
@@ -136,8 +135,7 @@
               "RelativeToolTip": "Admin\\User\\User.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T17:06:34.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:06:34.555Z"
             },
             {
               "$type": "Document",
@@ -154,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Edit_User.aspx",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Edit_User.aspx",
               "RelativeDocumentMoniker": "Admin\\User\\Edit_User.aspx",
@@ -162,12 +160,11 @@
               "RelativeToolTip": "Admin\\User\\Edit_User.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-30T17:06:26.935Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:06:26.935Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Delete_User.aspx",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Delete_User.aspx",
               "RelativeDocumentMoniker": "Admin\\User\\Delete_User.aspx",
@@ -175,12 +172,11 @@
               "RelativeToolTip": "Admin\\User\\Delete_User.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-30T17:06:25.798Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:06:25.798Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Create_User.aspx",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Create_User.aspx",
               "RelativeDocumentMoniker": "Admin\\User\\Create_User.aspx",
@@ -188,12 +184,11 @@
               "RelativeToolTip": "Admin\\User\\Create_User.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-30T17:06:24.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:06:24.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Create_User.aspx.designer.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Create_User.aspx.designer.cs",
               "RelativeDocumentMoniker": "Admin\\User\\Create_User.aspx.designer.cs",
@@ -201,25 +196,24 @@
               "RelativeToolTip": "Admin\\User\\Create_User.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T17:06:20.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:06:20.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "Create_User.aspx.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Create_User.aspx.cs",
               "RelativeDocumentMoniker": "Admin\\User\\Create_User.aspx.cs",
               "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Create_User.aspx.cs",
               "RelativeToolTip": "Admin\\User\\Create_User.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T17:06:17.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Delete_User.aspx.designer.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Delete_User.aspx.designer.cs",
               "RelativeDocumentMoniker": "Admin\\User\\Delete_User.aspx.designer.cs",
@@ -227,25 +221,24 @@
               "RelativeToolTip": "Admin\\User\\Delete_User.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T17:06:09.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:06:09.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 5,
               "Title": "Delete_User.aspx.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Delete_User.aspx.cs",
               "RelativeDocumentMoniker": "Admin\\User\\Delete_User.aspx.cs",
               "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Delete_User.aspx.cs",
               "RelativeToolTip": "Admin\\User\\Delete_User.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T17:06:09.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Edit_User.aspx.designer.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Edit_User.aspx.designer.cs",
               "RelativeDocumentMoniker": "Admin\\User\\Edit_User.aspx.designer.cs",
@@ -253,31 +246,30 @@
               "RelativeToolTip": "Admin\\User\\Edit_User.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T17:05:58.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T17:05:58.191Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "Edit_User.aspx.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Edit_User.aspx.cs",
               "RelativeDocumentMoniker": "Admin\\User\\Edit_User.aspx.cs",
               "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\Edit_User.aspx.cs",
               "RelativeToolTip": "Admin\\User\\Edit_User.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T17:05:55.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "User.aspx.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\User.aspx.cs",
               "RelativeDocumentMoniker": "Admin\\User\\User.aspx.cs",
               "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\User\\User.aspx.cs",
               "RelativeToolTip": "Admin\\User\\User.aspx.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAYwBUAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-30T17:04:16.771Z",
               "EditorCaption": ""
@@ -297,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Site.Master",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\WebBanLapTop\\Admin\\Site.Master",
               "RelativeDocumentMoniker": "Admin\\Site.Master",
@@ -318,8 +310,7 @@
               "RelativeToolTip": "Admin\\Dashboard.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T09:22:15.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T09:22:15.036Z"
             },
             {
               "$type": "Document",
@@ -331,8 +322,7 @@
               "RelativeToolTip": "Admin\\Dashboard.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T09:22:04.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T09:22:04.094Z"
             },
             {
               "$type": "Document",
@@ -344,8 +334,7 @@
               "RelativeToolTip": "Admin\\Dashboard.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-30T09:21:38.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-30T09:21:38.39Z"
             }
           ]
         }

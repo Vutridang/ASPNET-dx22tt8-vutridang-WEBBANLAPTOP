@@ -11,6 +11,13 @@ namespace WebBanLapTop.Admin
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			// Chặn truy cập nếu chưa đăng nhập
+			if (Session["AdminUser"] == null)
+			{
+				Response.Redirect("~/Admin/Login.aspx");
+				return;
+			}
+
 			if (!int.TryParse(Request.QueryString["id"], out userId))
 			{
 				Response.Redirect("User.aspx");
