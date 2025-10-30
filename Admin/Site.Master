@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebBanLapTop.Admin.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><asp:ContentPlaceHolder ID="HeadContent" runat="server" /></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../styles/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            padding-top: 56px; /* header height */
+        }
+        /* Sidebar */
+        #sidebar-wrapper {
+            min-height: 100vh;
+            width: 220px;
+            background-color: #343a40;
+            position: fixed;
+            top: 56px;
+            left: 0;
+            padding-top: 20px;
+        }
+        #sidebar-wrapper .list-group-item {
+            color: #fff;
+            background-color: #343a40;
+            border: none;
+        }
+        #sidebar-wrapper .list-group-item:hover {
+            background-color: #495057;
+        }
+        /* Main content */
+        #page-content-wrapper {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        /* Admin dropdown in sidebar */
+        .dropdown-toggle::after {
+            float: right;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand" href="Dashboard.aspx">LOGO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Admin greeting + dropdown logout -->
+                    <li class="nav-item dropdown" runat="server" id="liAdminDropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Xin chào <asp:Label ID="lblAdminNameTop" runat="server" Text=""></asp:Label>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <asp:LinkButton ID="lnkLogoutTop" runat="server" CssClass="dropdown-item" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                </div>
+            </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="list-group list-group-flush">
+                <!-- Sidebar menu -->
+                <a href="Dashboard.aspx" class="list-group-item list-group-item-action">Dashboard</a>
+                <a href="Dashboard.aspx" class="list-group-item list-group-item-action">Admins</a>
+                <a href="../orders-admins/show-orders.html" class="list-group-item list-group-item-action">Orders</a>
+                <a href="../foods-admins/show-foods.html" class="list-group-item list-group-item-action">Foods</a>
+                <a href="../bookings-admins/show-bookings.html" class="list-group-item list-group-item-action">Bookings</a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="page-content-wrapper">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+    </form>
+</body>
+</html>
