@@ -1,7 +1,7 @@
-﻿<%@ Page Title="Admin Dashboard" Language="C#" MasterPageFile="~/Admin/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="WebBanLapTop.Admin.Dashboard" %>
+﻿<%@ Page Title="Bảng điều khiển" Language="C#" MasterPageFile="~/Admin/Site.Master" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="WebBanLapTop.Admin.Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    <!-- CSS/JS riêng trang dashboard nếu cần -->
+    Bảng điều khiển
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

@@ -5,6 +5,11 @@ namespace WebBanLapTop.Admin
 {
 	public partial class SiteMaster : MasterPage
 	{
+		public System.Web.UI.WebControls.Label AdminNameLabel
+		{
+			get { return lblAdminNameTop; }
+		}
+
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!IsPostBack)
