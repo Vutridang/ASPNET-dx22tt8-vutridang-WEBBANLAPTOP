@@ -47,7 +47,7 @@
     <form id="form1" runat="server">
         <!-- Top Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand" href="Dashboard.aspx">LOGO</a>
+            <a class="navbar-brand" href="Dashboard.aspx">WEBBANLAPTOP</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar" aria-controls="topNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,11 +71,11 @@
         <div id="sidebar-wrapper">
             <div class="list-group list-group-flush">
                 <!-- Sidebar menu -->
-                <a href="Dashboard.aspx" class="list-group-item list-group-item-action">Dashboard</a>
-                <a href="Dashboard.aspx" class="list-group-item list-group-item-action">Admins</a>
-                <a href="../orders-admins/show-orders.html" class="list-group-item list-group-item-action">Orders</a>
-                <a href="../foods-admins/show-foods.html" class="list-group-item list-group-item-action">Foods</a>
-                <a href="../bookings-admins/show-bookings.html" class="list-group-item list-group-item-action">Bookings</a>
+                <a href="Dashboard.aspx" class="list-group-item list-group-item-action">Bảng điều khiển</a>
+                <a href="Dashboard.aspx" class="list-group-item list-group-item-action">Quản lý người dùng</a>
+                <a href="../orders-admins/show-orders.html" class="list-group-item list-group-item-action">Quản lý danh mục</a>
+                <a href="../foods-admins/show-foods.html" class="list-group-item list-group-item-action">Quản lý đơn hàng</a>
+                <a href="../bookings-admins/show-bookings.html" class="list-group-item list-group-item-action">Quản lý sản phẩm</a>
             </div>
         </div>
 
