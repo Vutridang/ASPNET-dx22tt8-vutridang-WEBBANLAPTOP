@@ -12,6 +12,7 @@
 				</ItemTemplate>
 			</asp:TemplateField>
 			<asp:BoundField DataField="product_name" HeaderText="Sản Phẩm" />
+			<asp:BoundField DataField="brand_name" HeaderText="Thương Hiệu" />
 			<asp:BoundField DataField="quantity" HeaderText="Số Lượng" />
 			<asp:BoundField DataField="price" HeaderText="Giá" DataFormatString="{0:N0} VND" />
 			<asp:BoundField DataField="total" HeaderText="Thành Tiền" DataFormatString="{0:N0} VND" />

@@ -3,9 +3,9 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
-namespace WebBanLapTop.Admin.Product
+namespace WebBanLapTop.Admin.Brand
 {
-	public partial class Product : System.Web.UI.Page
+	public partial class Brand : System.Web.UI.Page
 	{
 		private string connStr;
 
@@ -29,10 +29,7 @@ namespace WebBanLapTop.Admin.Product
 			if (!IsPostBack)
 			{
 				((SiteMaster)this.Master).ShowToastFromSession(this);
-
-
-				LoadProducts();
-
+				LoadBrands();
 				SetAdminNameFromSession();
 			}
 		}
@@ -45,29 +42,25 @@ namespace WebBanLapTop.Admin.Product
 			master.AdminNameLabel.Text = Session["AdminUser"] != null ? Session["AdminUser"].ToString() : "Admin";
 		}
 
-		private void LoadProducts()
+		private void LoadBrands()
 		{
-			if (gvProducts == null) return;
+			if (gvBrands == null) return;
 
 			try
 			{
 				using (SqlConnection conn = new SqlConnection(connStr))
 				{
-					string sql = @"
-						SELECT p.*, b.name AS brand_name
-						FROM product p
-						LEFT JOIN brand b ON p.brand_id = b.id
-						ORDER BY p.id DESC";
+					string sql = "SELECT * FROM brand ORDER BY id DESC";
 					SqlDataAdapter da = new SqlDataAdapter(sql, conn);
 					DataTable dt = new DataTable();
 					da.Fill(dt);
-					gvProducts.DataSource = dt.Rows.Count > 0 ? dt : null;
-					gvProducts.DataBind();
+					gvBrands.DataSource = dt.Rows.Count > 0 ? dt : null;
+					gvBrands.DataBind();
 				}
 			}
 			catch (Exception ex)
 			{
-				throw new Exception("Lỗi khi load dữ liệu sản phẩm: " + ex.Message);
+				throw new Exception("Lỗi khi load dữ liệu thương hiệu: " + ex.Message);
 			}
 		}
 	}

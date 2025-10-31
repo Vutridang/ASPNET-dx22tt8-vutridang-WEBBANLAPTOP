@@ -53,6 +53,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Brand\Brand.aspx" />
+    <Content Include="Admin\Brand\Create_Brand.aspx" />
+    <Content Include="Admin\Brand\Delete_Brand.aspx" />
+    <Content Include="Admin\Brand\Edit_Brand.aspx" />
     <Content Include="Admin\Category\Category.aspx" />
     <Content Include="Admin\Category\Create_Category.aspx" />
     <Content Include="Admin\Category\Delete_Category.aspx" />
@@ -84,6 +88,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Brand\Brand.aspx.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Brand\Brand.aspx.designer.cs">
+      <DependentUpon>Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Brand\Create_Brand.aspx.cs">
+      <DependentUpon>Create_Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Brand\Create_Brand.aspx.designer.cs">
+      <DependentUpon>Create_Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Brand\Delete_Brand.aspx.cs">
+      <DependentUpon>Delete_Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Brand\Delete_Brand.aspx.designer.cs">
+      <DependentUpon>Delete_Brand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Brand\Edit_Brand.aspx.cs">
+      <DependentUpon>Edit_Brand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Brand\Edit_Brand.aspx.designer.cs">
+      <DependentUpon>Edit_Brand.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Category\Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

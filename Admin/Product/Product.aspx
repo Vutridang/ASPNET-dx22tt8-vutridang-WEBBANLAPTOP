@@ -16,6 +16,7 @@
 			<asp:BoundField DataField="description" HeaderText="Mô Tả" />
 			<asp:BoundField DataField="price" HeaderText="Giá" DataFormatString="{0:N0} VND" />
 			<asp:BoundField DataField="stock" HeaderText="Tồn Kho" />
+			<asp:BoundField DataField="brand_name" HeaderText="Thương Hiệu" />
 			<asp:TemplateField HeaderText="Hình Ảnh">
 				<ItemTemplate>
 					<asp:Image ID="imgProduct" runat="server" Width="100px" ImageUrl='<%# Eval("image_url") %>' />

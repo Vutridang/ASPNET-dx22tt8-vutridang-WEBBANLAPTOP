@@ -39,6 +39,7 @@ namespace WebBanLapTop.Admin
 			dt.Rows.Add(stt++, "Sản phẩm", GetCount("product"));
 			dt.Rows.Add(stt++, "Danh mục", GetCount("category"));
 			dt.Rows.Add(stt++, "Đơn hàng", GetCount("order"));
+			dt.Rows.Add(stt++, "Thương hiệu", GetCount("brand"));
 
 			gvSummary.DataSource = dt;
 			gvSummary.DataBind();

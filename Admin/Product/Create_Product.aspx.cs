@@ -26,6 +26,7 @@ namespace WebBanLapTop.Admin.Product
 			if (!IsPostBack)
 			{
 				LoadCategories(); // Load danh mục đúng
+				LoadBrands();
 			}
 		}
 
@@ -53,6 +54,22 @@ namespace WebBanLapTop.Admin.Product
 			}
 		}
 
+		private void LoadBrands()
+		{
+			using (SqlConnection conn = new SqlConnection(connStr))
+			{
+				string sql = "SELECT id, name FROM brand ORDER BY name";
+				SqlCommand cmd = new SqlCommand(sql, conn);
+				conn.Open();
+				SqlDataReader dr = cmd.ExecuteReader();
+				ddlBrand.DataSource = dr;
+				ddlBrand.DataTextField = "name";
+				ddlBrand.DataValueField = "id";
+				ddlBrand.DataBind();
+				dr.Close();
+			}
+		}
+
 
 		protected void btnCreate_Click(object sender, EventArgs e)
 		{
@@ -61,6 +78,7 @@ namespace WebBanLapTop.Admin.Product
 			string priceText = txtPrice.Text.Trim();
 			string stockText = txtStock.Text.Trim();
 			int categoryId = int.Parse(ddlCategory.SelectedValue);
+			int brandId = int.Parse(ddlBrand.SelectedValue);
 
 			if (name == "" || priceText == "" || stockText == "")
 			{
@@ -88,11 +106,11 @@ namespace WebBanLapTop.Admin.Product
 			if (fileUpload.HasFile)
 			{
 				string fileName = Path.GetFileName(fileUpload.PostedFile.FileName);
-				string savePath = Server.MapPath("~/images/") + fileName;
+				string savePath = Server.MapPath("~/images/products/") + fileName;
 				try
 				{
 					fileUpload.SaveAs(savePath);
-					imageUrl = "/images/" + fileName;
+					imageUrl = "/images/products/" + fileName;
 				}
 				catch (Exception ex)
 				{
@@ -103,11 +121,13 @@ namespace WebBanLapTop.Admin.Product
 
 			using (SqlConnection conn = new SqlConnection(connStr))
 			{
-				string sql = "INSERT INTO product (category_id, name, description, price, stock, image_url) " +
-							 "VALUES (@category_id, @name, @description, @price, @stock, @image_url)";
+				string sql = @"INSERT INTO product 
+						(category_id, brand_id, name, description, price, stock, image_url, created_at, updated_at)
+						VALUES (@category_id, @brand_id, @name, @description, @price, @stock, @image_url, GETDATE(), GETDATE())";
 
 				SqlCommand cmd = new SqlCommand(sql, conn);
 				cmd.Parameters.AddWithValue("@category_id", categoryId);
+				cmd.Parameters.AddWithValue("@brand_id", brandId);
 				cmd.Parameters.AddWithValue("@name", name);
 				cmd.Parameters.AddWithValue("@description", description);
 				cmd.Parameters.AddWithValue("@price", price);

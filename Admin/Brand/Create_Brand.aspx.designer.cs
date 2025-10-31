@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebBanLapTop.Admin.Product
+namespace WebBanLapTop.Admin.Brand
 {
 
 
-	public partial class Edit_Product
+	public partial class Create_Brand
 	{
 
 		/// <summary>
@@ -51,51 +51,6 @@ namespace WebBanLapTop.Admin.Product
 		protected global::System.Web.UI.WebControls.TextBox txtDescription;
 
 		/// <summary>
-		/// txtPrice control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtPrice;
-
-		/// <summary>
-		/// txtStock control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.TextBox txtStock;
-
-		/// <summary>
-		/// ddlCategory control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
-
-		/// <summary>
-		/// ddlBrand control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.DropDownList ddlBrand;
-
-		/// <summary>
-		/// imgCurrent control.
-		/// </summary>
-		/// <remarks>
-		/// Auto-generated field.
-		/// To modify move field declaration from designer file to code-behind file.
-		/// </remarks>
-		protected global::System.Web.UI.WebControls.Image imgCurrent;
-
-		/// <summary>
 		/// fileUpload control.
 		/// </summary>
 		/// <remarks>
@@ -105,12 +60,21 @@ namespace WebBanLapTop.Admin.Product
 		protected global::System.Web.UI.WebControls.FileUpload fileUpload;
 
 		/// <summary>
-		/// btnUpdate control.
+		/// chkIsTop control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Button btnUpdate;
+		protected global::System.Web.UI.WebControls.CheckBox chkIsTop;
+
+		/// <summary>
+		/// btnCreate control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Button btnCreate;
 	}
 }

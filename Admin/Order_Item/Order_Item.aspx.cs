@@ -48,6 +48,7 @@ namespace WebBanLapTop.Admin.Order_Item
 					string sql = @"
 						SELECT 
 							p.name AS product_name,
+							b.name AS brand_name,
 							oi.quantity,
 							oi.price,
 							(oi.quantity * oi.price) AS total,
@@ -57,6 +58,7 @@ namespace WebBanLapTop.Admin.Order_Item
 						FROM order_item oi
 						INNER JOIN [order] o ON oi.order_id = o.id
 						INNER JOIN product p ON oi.product_id = p.id
+						LEFT JOIN brand b ON p.brand_id = b.id
 						INNER JOIN [user] u ON o.user_id = u.id
 						WHERE o.id = @orderId
 						ORDER BY oi.id";

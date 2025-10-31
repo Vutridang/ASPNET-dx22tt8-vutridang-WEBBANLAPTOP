@@ -26,6 +26,7 @@ namespace WebBanLapTop.Admin.Product
 			if (!IsPostBack)
 			{
 				LoadCategories();
+				LoadBrands();
 				LoadProduct();
 			}
 		}
@@ -43,6 +44,22 @@ namespace WebBanLapTop.Admin.Product
 				ddlCategory.DataTextField = "category_name";
 				ddlCategory.DataValueField = "id";
 				ddlCategory.DataBind();
+			}
+		}
+
+		private void LoadBrands()
+		{
+			using (SqlConnection conn = new SqlConnection(connStr))
+			{
+				string sql = "SELECT id, name FROM brand ORDER BY name";
+				SqlCommand cmd = new SqlCommand(sql, conn);
+				conn.Open();
+				SqlDataReader dr = cmd.ExecuteReader();
+				ddlBrand.DataSource = dr;
+				ddlBrand.DataTextField = "name";
+				ddlBrand.DataValueField = "id";
+				ddlBrand.DataBind();
+				dr.Close();
 			}
 		}
 
@@ -69,7 +86,7 @@ namespace WebBanLapTop.Admin.Product
 					txtPrice.Text = reader["price"].ToString();
 					txtStock.Text = reader["stock"].ToString();
 					ddlCategory.SelectedValue = reader["category_id"].ToString();
-
+					ddlBrand.SelectedValue = reader["brand_id"].ToString();
 					string imageUrl = reader["image_url"].ToString();
 					if (!string.IsNullOrEmpty(imageUrl))
 					{
@@ -95,6 +112,7 @@ namespace WebBanLapTop.Admin.Product
 			string description = txtDescription.Text.Trim();
 			string priceText = txtPrice.Text.Trim();
 			string stockText = txtStock.Text.Trim();
+			int brandId = int.Parse(ddlBrand.SelectedValue);
 			int categoryId = int.Parse(ddlCategory.SelectedValue);
 
 			if (name == "" || priceText == "" || stockText == "")
@@ -121,7 +139,7 @@ namespace WebBanLapTop.Admin.Product
 			if (fileUpload.HasFile)
 			{
 				string fileName = Path.GetFileName(fileUpload.PostedFile.FileName);
-				string savePath = Server.MapPath("~/images/") + fileName;
+				string savePath = Server.MapPath("~/images/products/") + fileName;
 
 				// Lấy image cũ để xóa
 				string oldImageUrl = null;
@@ -138,7 +156,7 @@ namespace WebBanLapTop.Admin.Product
 				try
 				{
 					fileUpload.SaveAs(savePath);
-					newImageUrl = "/images/" + fileName;
+					newImageUrl = "/images/products/" + fileName;
 
 					// Xóa hình cũ
 					if (!string.IsNullOrEmpty(oldImageUrl))
@@ -160,7 +178,14 @@ namespace WebBanLapTop.Admin.Product
 			// Update product
 			using (SqlConnection conn = new SqlConnection(connStr))
 			{
-				string sql = "UPDATE product SET category_id=@category_id, name=@name, description=@description, price=@price, stock=@stock, updated_at=GETDATE()";
+				string sql = @"UPDATE product SET 
+						category_id=@category_id,
+						brand_id=@brand_id,
+						name=@name,
+						description=@description,
+						price=@price,
+						stock=@stock,
+						updated_at=GETDATE()";
 
 				if (newImageUrl != null)
 					sql += ", image_url=@image_url";
@@ -170,6 +195,7 @@ namespace WebBanLapTop.Admin.Product
 				SqlCommand cmd = new SqlCommand(sql, conn);
 				cmd.Parameters.AddWithValue("@id", productId);
 				cmd.Parameters.AddWithValue("@category_id", categoryId);
+				cmd.Parameters.AddWithValue("@brand_id", brandId);
 				cmd.Parameters.AddWithValue("@name", name);
 				cmd.Parameters.AddWithValue("@description", description);
 				cmd.Parameters.AddWithValue("@price", price);
