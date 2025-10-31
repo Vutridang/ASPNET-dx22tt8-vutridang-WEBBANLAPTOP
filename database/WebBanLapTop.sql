@@ -92,6 +92,38 @@ INSERT INTO order_item (order_id, product_id, quantity, price) VALUES
 -- Đơn hàng 2 (order_id = 2)
 (4, 12, 1, 1800000.00);   -- MSI Katana GF66
 
+CREATE TABLE brand (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    name NVARCHAR(255) NOT NULL,
+    logo_url NVARCHAR(500) NULL,
+    description NVARCHAR(MAX) NULL,
+    is_top BIT DEFAULT 0
+);
+Bước 3: Thêm dữ liệu mẫu
+sql
+Copy code
+INSERT INTO brand (name, logo_url, description, is_top) VALUES
+(N'Asus', '/images/brands/asus.png', N'Thương hiệu laptop gaming nổi tiếng', 1),
+(N'MSI', '/images/brands/msi.png', N'Laptop gaming hiệu năng cao', 1),
+(N'Dell', '/images/brands/dell.png', N'Thương hiệu doanh nhân, bền bỉ', 1),
+(N'HP', '/images/brands/hp.png', N'Thiết kế sang trọng, mỏng nhẹ', 0),
+(N'Lenovo', '/images/brands/lenovo.png', N'Laptop văn phòng, doanh nghiệp', 0);
+Bước 4 (nếu chưa làm): Thêm cột brand_id vào bảng product
+sql
+Copy code
+ALTER TABLE product 
+ADD brand_id INT NULL 
+    CONSTRAINT FK_product_brand FOREIGN KEY (brand_id) REFERENCES brand(id);
+Rồi cập nhật lại dữ liệu sản phẩm cho đúng brand:
+
+sql
+Copy code
+UPDATE product SET brand_id = 1 WHERE name LIKE '%Asus%';
+UPDATE product SET brand_id = 2 WHERE name LIKE '%MSI%';
+UPDATE product SET brand_id = 3 WHERE name LIKE '%Dell%';
+UPDATE product SET brand_id = 4 WHERE name LIKE '%HP%';
+UPDATE product SET brand_id = 5 WHERE name LIKE '%Lenovo%';
+
 
 
 
