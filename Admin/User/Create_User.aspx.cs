@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Web.Security;
+using System.Web.UI;
 
 namespace WebBanLapTop.Admin
 {
@@ -56,7 +57,13 @@ namespace WebBanLapTop.Admin
 				{
 					conn.Open();
 					cmd.ExecuteNonQuery();
-					Response.Redirect("User.aspx");
+
+					// Lưu thông báo vào Session
+					Session["ToastMessage"] = "Thêm người dùng thành công!";
+
+					// Redirect sang User.aspx
+					Response.Redirect("User.aspx", false);
+					Context.ApplicationInstance.CompleteRequest();
 				}
 				catch (Exception ex)
 				{

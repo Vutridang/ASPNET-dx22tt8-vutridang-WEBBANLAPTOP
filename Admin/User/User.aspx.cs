@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI;
 
 namespace WebBanLapTop.Admin
 {
@@ -29,11 +30,13 @@ namespace WebBanLapTop.Admin
 
 			if (!IsPostBack)
 			{
-				// Set tên Admin lên MasterPage (null-safe)
-				SetAdminNameFromSession();
+				((SiteMaster)this.Master).ShowToastFromSession(this);
 
 				// Load danh sách user
 				LoadUsers();
+
+				// Set tên Admin lên MasterPage
+				SetAdminNameFromSession();
 			}
 		}
 

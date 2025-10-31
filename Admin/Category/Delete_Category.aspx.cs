@@ -34,7 +34,12 @@ namespace WebBanLapTop.Admin.Category
 				cmd.ExecuteNonQuery();
 			}
 
-			Response.Redirect("Category.aspx");
+			// Lưu thông báo vào Session
+			Session["ToastMessage"] = "Xóa danh mục thành công!";
+
+			// Quay lại trang danh sách danh mục
+			Response.Redirect("Category.aspx", false);
+			Context.ApplicationInstance.CompleteRequest();
 		}
 	}
 }

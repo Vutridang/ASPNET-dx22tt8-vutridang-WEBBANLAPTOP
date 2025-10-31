@@ -87,7 +87,12 @@ namespace WebBanLapTop.Admin
 
 				conn.Open();
 				cmd.ExecuteNonQuery();
-				Response.Redirect("User.aspx");
+				// Lưu thông báo vào Session
+				Session["ToastMessage"] = "Cập nhật người dùng thành công!";
+
+				// Redirect sang User.aspx
+				Response.Redirect("User.aspx", false);
+				Context.ApplicationInstance.CompleteRequest();
 			}
 		}
 	}

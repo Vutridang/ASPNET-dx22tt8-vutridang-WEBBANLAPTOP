@@ -28,8 +28,12 @@ namespace WebBanLapTop.Admin.Product
 
 			if (!IsPostBack)
 			{
-				SetAdminNameFromSession();
+				((SiteMaster)this.Master).ShowToastFromSession(this);
+
+				
 				LoadProducts();
+
+				SetAdminNameFromSession();
 			}
 		}
 

@@ -28,6 +28,31 @@ namespace WebBanLapTop.Admin
 			}
 		}
 
+		public void ShowToastFromSession(Page page, string sessionKey = "ToastMessage")
+		{
+			if (page.IsPostBack) return;
+
+			if (page.Session[sessionKey] != null)
+			{
+				string msg = page.Session[sessionKey].ToString();
+				page.Session[sessionKey] = null;
+
+				string script = $@"
+            Swal.fire({{
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: '{msg}',
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true
+            }});";
+
+				ScriptManager.RegisterStartupScript(page, page.GetType(), Guid.NewGuid().ToString(), script, true);
+			}
+		}
+
+
 
 		// Logout
 		protected void lnkLogout_Click(object sender, EventArgs e)

@@ -30,11 +30,13 @@ namespace WebBanLapTop.Admin.Category
 
 			if (!IsPostBack)
 			{
-				// Set tên Admin lên MasterPage
-				SetAdminNameFromSession();
+				((SiteMaster)this.Master).ShowToastFromSession(this);
 
 				// Load danh sách Category
 				LoadCategories();
+
+				// Set tên Admin lên MasterPage
+				SetAdminNameFromSession();
 			}
 		}
 

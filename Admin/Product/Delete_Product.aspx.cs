@@ -58,8 +58,12 @@ namespace WebBanLapTop.Admin.Product
 				}
 			}
 
+			// Lưu thông báo vào Session
+			Session["ToastMessage"] = "Xóa sản phẩm thành công!";
+
 			// Quay lại trang danh sách sản phẩm
-			Response.Redirect("Product.aspx");
+			Response.Redirect("Product.aspx", false);
+			Context.ApplicationInstance.CompleteRequest();
 		}
 	}
 }

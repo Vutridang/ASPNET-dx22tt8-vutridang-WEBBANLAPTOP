@@ -182,7 +182,12 @@ namespace WebBanLapTop.Admin.Product
 				{
 					conn.Open();
 					cmd.ExecuteNonQuery();
-					Response.Redirect("Product.aspx");
+					// Lưu thông báo vào Session
+					Session["ToastMessage"] = "Cập nhật sản phẩm thành công!";
+
+					// Redirect sang User.aspx
+					Response.Redirect("Product.aspx", false);
+					Context.ApplicationInstance.CompleteRequest();
 				}
 				catch (Exception ex)
 				{
