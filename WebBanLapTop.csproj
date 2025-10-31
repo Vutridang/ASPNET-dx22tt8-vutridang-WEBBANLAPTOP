@@ -57,6 +57,8 @@
     <Content Include="Admin\Category\Create_Category.aspx" />
     <Content Include="Admin\Category\Delete_Category.aspx" />
     <Content Include="Admin\Category\Edit_Category.aspx" />
+    <Content Include="Admin\Order\Order.aspx" />
+    <Content Include="Admin\Order_Item\Order_Item.aspx" />
     <Content Include="Admin\Product\Create_Product.aspx" />
     <Content Include="Admin\Product\Delete_Product.aspx" />
     <Content Include="Admin\Product\Edit_Product.aspx" />
@@ -107,6 +109,20 @@
     </Compile>
     <Compile Include="Admin\Category\Edit_Category.aspx.designer.cs">
       <DependentUpon>Edit_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Order\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Order\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Order_Item\Order_Item.aspx.cs">
+      <DependentUpon>Order_Item.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Order_Item\Order_Item.aspx.designer.cs">
+      <DependentUpon>Order_Item.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Product\Create_Product.aspx.cs">
       <DependentUpon>Create_Product.aspx</DependentUpon>

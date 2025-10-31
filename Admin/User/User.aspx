@@ -8,7 +8,11 @@
 	</p>
 	<asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped" DataKeyNames="id">
 		<Columns>
-			<asp:BoundField DataField="id" HeaderText="ID" ReadOnly="True" />
+			<asp:TemplateField HeaderText="STT">
+				<ItemTemplate>
+					<%# Container.DataItemIndex + 1 %>
+				</ItemTemplate>
+			</asp:TemplateField>
 			<asp:BoundField DataField="username" HeaderText="Tên Đăng Nhập" />
 			<asp:BoundField DataField="email" HeaderText="Email" />
 			<asp:BoundField DataField="role" HeaderText="Vai Trò" />

@@ -80,16 +80,17 @@ INSERT INTO product (category_id, name, description, price, stock, image_url) VA
 
 -- Order
 INSERT INTO [order] (user_id, total_amount, status) VALUES
-(2, 4300.00, 'paid'),
-(2, 1800.00, 'pending');
+(2, 4300000.00, 'paid'),    -- đơn hàng 1 của customer1: 2200000 + 2100000
+(2, 1800000.00, 'pending'); -- đơn hàng 2 của customer1: 1800000
 
 -- Order Item
 INSERT INTO order_item (order_id, product_id, quantity, price) VALUES
--- Đơn hàng 1
-(1, 3, 1, 2200.00),
-(1, 4, 1, 2100.00),
--- Đơn hàng 2
-(2, 2, 1, 1800.00);
+-- Đơn hàng 1 (order_id = 1)
+(3, 13, 1, 2200000.00),   -- Dell XPS 13
+(3, 14, 1, 2100000.00),   -- HP Spectre x360
+
+-- Đơn hàng 2 (order_id = 2)
+(4, 12, 1, 1800000.00);   -- MSI Katana GF66
 
 
 

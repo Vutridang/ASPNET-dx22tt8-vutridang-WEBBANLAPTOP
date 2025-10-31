@@ -30,8 +30,6 @@ namespace WebBanLapTop.Admin
 
 		public void ShowToastFromSession(Page page, string sessionKey = "ToastMessage")
 		{
-			if (page.IsPostBack) return;
-
 			if (page.Session[sessionKey] != null)
 			{
 				string msg = page.Session[sessionKey].ToString();

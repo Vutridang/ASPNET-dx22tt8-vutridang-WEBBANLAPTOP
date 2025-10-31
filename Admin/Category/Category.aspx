@@ -9,7 +9,11 @@
 
 	<asp:GridView ID="gvCategory" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped" DataKeyNames="id">
 		<Columns>
-			<asp:BoundField DataField="id" HeaderText="ID" ReadOnly="True" />
+			<asp:TemplateField HeaderText="STT">
+				<ItemTemplate>
+					<%# Container.DataItemIndex + 1 %>
+				</ItemTemplate>
+			</asp:TemplateField>
 			<asp:BoundField DataField="category_name" HeaderText="Tên Danh Mục" />
 			<asp:BoundField DataField="created_at" HeaderText="Ngày Tạo" DataFormatString="{0:dd/MM/yyyy HH:mm}" />
 			<asp:BoundField DataField="updated_at" HeaderText="Ngày Cập Nhật" DataFormatString="{0:dd/MM/yyyy HH:mm}" />

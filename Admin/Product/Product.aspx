@@ -7,7 +7,11 @@
 	</p>
 	<asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped" DataKeyNames="id">
 		<Columns>
-			<asp:BoundField DataField="id" HeaderText="ID" ReadOnly="True" />
+			<asp:TemplateField HeaderText="STT">
+				<ItemTemplate>
+					<%# Container.DataItemIndex + 1 %>
+				</ItemTemplate>
+			</asp:TemplateField>
 			<asp:BoundField DataField="name" HeaderText="Tên Sản Phẩm" />
 			<asp:BoundField DataField="description" HeaderText="Mô Tả" />
 			<asp:BoundField DataField="price" HeaderText="Giá" DataFormatString="{0:N0} VND" />

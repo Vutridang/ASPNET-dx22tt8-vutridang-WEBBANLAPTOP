@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
+using System.Web.Security;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebBanLapTop.Admin
 {
 	public partial class Login : System.Web.UI.Page
 	{
 		private string connStr = ConfigurationManager.ConnectionStrings["WebBanLapTopConnection"].ConnectionString;
+
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			// Nếu đã login, tự động chuyển đến Dashboard
@@ -26,24 +24,40 @@ namespace WebBanLapTop.Admin
 			string username = txtUsername.Text.Trim();
 			string password = txtPassword.Text.Trim();
 
-			using (SqlConnection conn = new SqlConnection(connStr))
+			if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
 			{
-				string sql = "SELECT COUNT(*) FROM [user] WHERE username=@username AND password=@password AND role='admin'";
-				SqlCommand cmd = new SqlCommand(sql, conn);
-				cmd.Parameters.AddWithValue("@username", username);
-				cmd.Parameters.AddWithValue("@password", password);
+				lblMessage.Text = "Vui lòng nhập đầy đủ thông tin.";
+				return;
+			}
 
-				conn.Open();
-				int count = (int)cmd.ExecuteScalar();
-				if (count > 0)
+			// Hash password SHA1 giống Edit_User
+			string hashedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
+
+			try
+			{
+				using (SqlConnection conn = new SqlConnection(connStr))
 				{
-					Session["AdminUser"] = username;
-					Response.Redirect("Dashboard.aspx");
+					string sql = "SELECT COUNT(*) FROM [user] WHERE username=@username AND password=@password AND role='admin'";
+					SqlCommand cmd = new SqlCommand(sql, conn);
+					cmd.Parameters.AddWithValue("@username", username);
+					cmd.Parameters.AddWithValue("@password", hashedPassword);
+
+					conn.Open();
+					int count = (int)cmd.ExecuteScalar();
+					if (count > 0)
+					{
+						Session["AdminUser"] = username;
+						Response.Redirect("Dashboard.aspx");
+					}
+					else
+					{
+						lblMessage.Text = "Tên đăng nhập hoặc mật khẩu không đúng.";
+					}
 				}
-				else
-				{
-					lblMessage.Text = "Tên đăng nhập hoặc mật khẩu không đúng.";
-				}
+			}
+			catch (Exception ex)
+			{
+				lblMessage.Text = "Lỗi kết nối hoặc truy vấn: " + ex.Message;
 			}
 		}
 	}
