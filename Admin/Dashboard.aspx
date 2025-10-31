@@ -6,17 +6,17 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
-        <div class="col">
+        <div class="col-md-12 mb-4">
             <div class="card">
+                <div class="card-header">
+                    <h5>Tổng hợp</h5>
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title mb-4 d-inline">Admins</h5>
-                    <a href="CreateAdmin.aspx" class="btn btn-primary mb-4 float-right">Create Admins</a>
-
-                    <asp:GridView ID="gvAdmins" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped">
+                    <asp:GridView ID="gvSummary" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered table-striped">
                         <Columns>
-                            <asp:BoundField DataField="id" HeaderText="#" />
-                            <asp:BoundField DataField="username" HeaderText="Username" />
-                            <asp:BoundField DataField="email" HeaderText="Email" />
+                            <asp:BoundField DataField="STT" HeaderText="STT" />
+                            <asp:BoundField DataField="Name" HeaderText="Tên" />
+                            <asp:BoundField DataField="Quantity" HeaderText="Số lượng" />
                         </Columns>
                     </asp:GridView>
                 </div>
