@@ -72,8 +72,10 @@
     <Content Include="Admin\User\Delete_User.aspx" />
     <Content Include="Admin\User\Edit_User.aspx" />
     <Content Include="Admin\Site.Master" />
+    <Content Include="Home\Contact.aspx" />
     <Content Include="Home\index.aspx" />
     <Content Include="Home\Login.aspx" />
+    <Content Include="Home\Register.aspx" />
     <Content Include="Home\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -236,6 +238,13 @@
     <Compile Include="Admin\User\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -249,6 +258,13 @@
     </Compile>
     <Compile Include="Home\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

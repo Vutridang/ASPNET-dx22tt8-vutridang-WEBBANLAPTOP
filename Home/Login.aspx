@@ -23,7 +23,7 @@
             OnClick="btnLogin_Click" />
 
         <div style="text-align:center; margin-top:15px;">
-            <a href="register.aspx">Chưa có tài khoản? Đăng ký ngay</a>
+            <a href="Register.aspx">Chưa có tài khoản? Đăng ký ngay</a>
         </div>
     </div>
 </asp:Content>
