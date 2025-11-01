@@ -123,6 +123,45 @@
 			position: relative; /* không fixed hay absolute */
 			width: 100%;
 		}
+
+		.quantity-box {
+			margin-top: 15px;
+		}
+
+			.quantity-box label {
+				font-weight: 600;
+				margin-right: 10px;
+			}
+
+		.quantity-control {
+			display: inline-flex;
+			align-items: center;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+
+			.quantity-control button {
+				background-color: #198754;
+				color: white;
+				border: none;
+				width: 35px;
+				height: 35px;
+				font-size: 20px;
+				cursor: pointer;
+			}
+
+				.quantity-control button:hover {
+					background-color: #157347;
+				}
+
+		.buyfield {
+			width: 50px;
+			height: 35px;
+			border: none;
+			text-align: center;
+			font-size: 16px;
+		}
 	</style>
 	<!-- SweetAlert2 CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">

@@ -33,6 +33,15 @@ namespace WebBanLapTop.Home
 		protected global::System.Web.UI.WebControls.Label lblName;
 
 		/// <summary>
+		/// lblShortDesc control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblShortDesc;
+
+		/// <summary>
 		/// lblPrice control.
 		/// </summary>
 		/// <remarks>
@@ -42,13 +51,13 @@ namespace WebBanLapTop.Home
 		protected global::System.Web.UI.WebControls.Label lblPrice;
 
 		/// <summary>
-		/// lblStock control.
+		/// lblCategory control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblStock;
+		protected global::System.Web.UI.WebControls.Label lblCategory;
 
 		/// <summary>
 		/// lblBrand control.
@@ -60,13 +69,13 @@ namespace WebBanLapTop.Home
 		protected global::System.Web.UI.WebControls.Label lblBrand;
 
 		/// <summary>
-		/// lblDescription control.
+		/// lblStock control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblDescription;
+		protected global::System.Web.UI.WebControls.Label lblStock;
 
 		/// <summary>
 		/// txtQuantity control.
@@ -85,5 +94,23 @@ namespace WebBanLapTop.Home
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Button btnAddToCart;
+
+		/// <summary>
+		/// lblDescription control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblDescription;
+
+		/// <summary>
+		/// rptCategories control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Repeater rptCategories;
 	}
 }

@@ -76,6 +76,7 @@
     <Content Include="Home\index.aspx" />
     <Content Include="Home\Account\Login.aspx" />
     <Content Include="Home\Product\Product.aspx" />
+    <Content Include="Home\Product\ProductByCategory.aspx" />
     <Content Include="Home\Product\ProductDetail.aspx" />
     <Content Include="Home\Account\Register.aspx" />
     <Content Include="Home\Product\SearchProduct.aspx" />
@@ -269,6 +270,13 @@
     </Compile>
     <Compile Include="Home\Product\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Product\ProductByCategory.aspx.cs">
+      <DependentUpon>ProductByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product\ProductByCategory.aspx.designer.cs">
+      <DependentUpon>ProductByCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Product\ProductDetail.aspx.cs">
       <DependentUpon>ProductDetail.aspx</DependentUpon>
