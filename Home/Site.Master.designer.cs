@@ -51,13 +51,40 @@ namespace WebBanLapTop.Home
 		protected global::System.Web.UI.WebControls.Button btnSearch;
 
 		/// <summary>
-		/// lnkLogin control.
+		/// divAuthButtons control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.HyperLink lnkLogin;
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl divAuthButtons;
+
+		/// <summary>
+		/// divUserInfo control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl divUserInfo;
+
+		/// <summary>
+		/// lblUserNameTop control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblUserNameTop;
+
+		/// <summary>
+		/// headerBottom control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerBottom;
 
 		/// <summary>
 		/// FeaturedProducts control.

@@ -4,19 +4,19 @@ using System.Data.SqlClient;
 using System.Web.Security;
 using System.Web.UI;
 
-namespace WebBanLapTop.Admin
+namespace WebBanLapTop.Home
 {
-	public partial class Login : System.Web.UI.Page
+	public partial class Login : Page
 	{
 		private string connStr = ConfigurationManager.ConnectionStrings["WebBanLapTopConnection"].ConnectionString;
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			((SiteMaster)this.Master).ShowToastFromSession(this);
-			// Nếu đã login, tự động chuyển đến Dashboard
-			if (Session["AdminUser"] != null)
+			// Nếu đã đăng nhập → quay lại trang chủ
+			if (Session["AdminUser"] != null || Session["CustomerUser"] != null)
 			{
-				Response.Redirect("~/Admin/Dashboard.aspx");
+				Response.Redirect("~/Home/index.aspx", false);
+				Context.ApplicationInstance.CompleteRequest();
 			}
 		}
 
@@ -31,25 +31,36 @@ namespace WebBanLapTop.Admin
 				return;
 			}
 
-			// Hash password SHA1 giống Edit_User
+			// ✅ Mã hoá mật khẩu SHA1
 			string hashedPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(password, "SHA1");
 
 			try
 			{
 				using (SqlConnection conn = new SqlConnection(connStr))
 				{
-					string sql = "SELECT COUNT(*) FROM [user] WHERE username=@username AND password=@password AND role='admin'";
+					string sql = "SELECT role FROM [user] WHERE username=@username AND password=@password";
 					SqlCommand cmd = new SqlCommand(sql, conn);
 					cmd.Parameters.AddWithValue("@username", username);
 					cmd.Parameters.AddWithValue("@password", hashedPassword);
 
 					conn.Open();
-					int count = (int)cmd.ExecuteScalar();
-					if (count > 0)
+					object result = cmd.ExecuteScalar();
+
+					if (result != null)
 					{
-						Session["AdminUser"] = username;
+						string role = result.ToString().Trim().ToLower();
+
+						// ✅ Ghi session dùng chung
+						if (role == "admin")
+							Session["AdminUser"] = username;
+						else
+							Session["CustomerUser"] = username;
+
 						Session["ToastMessage"] = "Đăng nhập thành công!";
-						Response.Redirect("Dashboard.aspx");
+
+						// ✅ Chuyển hướng an toàn, không bị chặn giữa chừng
+						Response.Redirect("~/Home/index.aspx", false);
+						Context.ApplicationInstance.CompleteRequest();
 					}
 					else
 					{
@@ -59,7 +70,7 @@ namespace WebBanLapTop.Admin
 			}
 			catch (Exception ex)
 			{
-				lblMessage.Text = "Lỗi kết nối hoặc truy vấn: " + ex.Message;
+				lblMessage.Text = "Lỗi kết nối: " + ex.Message;
 			}
 		}
 	}

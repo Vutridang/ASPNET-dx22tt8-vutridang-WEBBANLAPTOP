@@ -10,6 +10,7 @@ namespace WebBanLapTop.Home
 		{
 			if (!IsPostBack)
 			{
+				((SiteMaster)this.Master).ShowToastFromSession(this);
 				LoadFeaturedProducts();
 				LoadProducts();
 			}

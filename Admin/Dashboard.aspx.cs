@@ -22,6 +22,7 @@ namespace WebBanLapTop.Admin
 
 			if (!IsPostBack)
 			{
+				((SiteMaster)this.Master).ShowToastFromSession(this);
 				LoadSummary();
 			}
 		}

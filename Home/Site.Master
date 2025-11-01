@@ -13,6 +13,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/menu.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/flexslider.css" rel="stylesheet" type="text/css" />
+	<link href="../styles/style.css" rel="stylesheet" />
 	<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
 
@@ -46,6 +47,67 @@
 			});
 		});
 	</script>
+	<style>
+		/* Căn hàng ngang cho user info */
+		.header_top_right {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 10px;
+		}
+
+		/* Dành cho vùng đăng nhập hoặc chào user */
+		.user_section {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		/* Dòng chữ "Xin chào" canh giữa với button */
+		.user_greeting {
+			font-size: 20px;
+			color: #198754;
+			line-height: 32px; /* để thẳng hàng nút */
+			font-weight: bold;
+		}
+
+		/* Nút chung (đăng nhập/đăng ký) */
+		.btn-nav {
+			background-color: #198754;
+			border: 1px solid #ccc;
+			padding: 5px 10px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 13px;
+			transition: background-color 0.2s;
+			height: 38px; /* chiều cao cố định */
+			width: 95px;
+			color: white;
+		}
+
+		/* Nút giỏ hàng và đăng xuất cùng chiều cao */
+		.btn-cart {
+			background-color: #dc3545;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			padding: 5px 12px;
+			cursor: pointer;
+			font-size: 13px;
+			height: 38px; /* bằng với nút giỏ hàng */
+			width: 90px;
+			transition: background-color 0.2s;
+			color: white;
+		}
+
+			.btn-nav:hover,
+			.btn-cart:hover {
+				background-color: #ddd;
+			}
+	</style>
+	<!-- SweetAlert2 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+	<!-- SweetAlert2 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -59,23 +121,38 @@
 				<div class="header_top_right">
 					<div class="search_box">
 						<asp:TextBox ID="txtSearch" runat="server" CssClass="search-input" Text="Tìm kiếm sản phẩm"
-							onfocus="if(this.value=='Search for Products')this.value='';"
-							onblur="if(this.value=='')this.value='Search for Products';"></asp:TextBox>
+							onfocus="if(this.value=='Tìm kiếm sản phẩm')this.value='';"
+							onblur="if(this.value=='')this.value='Tìm kiếm sản phẩm';"></asp:TextBox>
 						<asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="search-btn" />
 					</div>
+
 					<div class="shopping_cart">
 						<div class="cart">
 							<a href="cart.aspx" title="View my shopping cart" rel="nofollow">
 								<span class="cart_title">Giỏ hàng</span>
-								<span class="no_product">(Còn trống)</span>
+								<span class="no_product">(0)</span>
 							</a>
 						</div>
 					</div>
-					<div class="login">
-						<asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="login.aspx">Đăng nhập</asp:HyperLink>
+
+					<div class="user_section" runat="server" id="divAuthButtons">
+						<button type="button" class="btn-nav" onclick="location.href='/Home/Login.aspx'">Đăng nhập</button>
+						<button type="button" class="btn-nav" onclick="location.href='/Home/Register.aspx'">Đăng ký</button>
 					</div>
+
+					<div class="user_section" runat="server" id="divUserInfo" visible="false">
+						<span class="user_greeting">
+							<asp:Label ID="lblUserNameTop" runat="server" Text=""></asp:Label>
+						</span>
+						<button type="button" class="btn-cart" runat="server" onserverclick="btnLogout_Click">Đăng xuất</button>
+					</div>
+
+
+
+
 					<div class="clear"></div>
 				</div>
+
 				<div class="clear"></div>
 			</div>
 
@@ -92,7 +169,7 @@
 			</div>
 
 			<!-- Header Bottom -->
-			<div class="header_bottom">
+			<div id="headerBottom" runat="server" class="header_bottom">
 				<div class="header_bottom_left">
 					<asp:ContentPlaceHolder ID="FeaturedProducts" runat="server" />
 				</div>
@@ -102,29 +179,22 @@
 					<section class="slider">
 						<div class="flexslider">
 							<ul class="slides">
-								<li>
-									<a href="#">
-										<img src="images/1.jpg" alt="Slide 1" /></a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/2.jpg" alt="Slide 2" /></a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/3.jpg" alt="Slide 3" /></a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="images/4.jpg" alt="Slide 4" /></a>
-								</li>
+								<li><a href="#">
+									<img src="images/1.jpg" alt="Slide 1" /></a></li>
+								<li><a href="#">
+									<img src="images/2.jpg" alt="Slide 2" /></a></li>
+								<li><a href="#">
+									<img src="images/3.jpg" alt="Slide 3" /></a></li>
+								<li><a href="#">
+									<img src="images/4.jpg" alt="Slide 4" /></a></li>
 							</ul>
 						</div>
 					</section>
-					<!-- End FlexSlider -->
 				</div>
+
 				<div class="clear"></div>
 			</div>
+
 
 			<!-- Main Content -->
 			<div class="main">

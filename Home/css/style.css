@@ -114,6 +114,7 @@ body{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	text-align: center;
 }
 .shopping_cart .cart .opencart {
 	width: 7px;
@@ -2475,3 +2476,4 @@ p.terms {
 		padding:4%;
 	}
 }
+

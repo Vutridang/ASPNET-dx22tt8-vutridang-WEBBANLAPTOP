@@ -73,6 +73,7 @@
     <Content Include="Admin\User\Edit_User.aspx" />
     <Content Include="Admin\Site.Master" />
     <Content Include="Home\index.aspx" />
+    <Content Include="Home\Login.aspx" />
     <Content Include="Home\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="Home\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

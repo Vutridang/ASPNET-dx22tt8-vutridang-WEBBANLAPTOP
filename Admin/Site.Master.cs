@@ -56,6 +56,7 @@ namespace WebBanLapTop.Admin
 		protected void lnkLogout_Click(object sender, EventArgs e)
 		{
 			Session.Clear(); // Xóa session
+			Session["ToastMessage"] = "Đăng xuất thành công!";
 			Response.Redirect("~/Admin/Login.aspx");
 		}
 	}
