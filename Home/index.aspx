@@ -1,9 +1,5 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Home/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebBanLapTop.Home.index" %>
 
-<asp:Content ID="HeadContent" ContentPlaceHolderID="HeadContent" runat="server">
-	Home - Web Bán Laptop
-</asp:Content>
-
 <asp:Content ID="FeaturedProductsContent" ContentPlaceHolderID="FeaturedProducts" runat="server">
 	<asp:Repeater ID="rptFeaturedProducts" runat="server">
 		<ItemTemplate>
@@ -47,6 +43,9 @@
 						<p><%# Eval("description") %></p>
 						<p><span class="price"><%# String.Format("{0:N0}₫", Eval("price")) %></span></p>
 						<div class="button">
+							<span>
+								<a href='/Home/Product/ProductDetail.aspx?id=<%# Eval("id") %>' class="details">Chi tiết</a>
+							</span>
 							<span>
 								<a href='cart.aspx?add=<%# Eval("id") %>' class="details">Giỏ hàng</a>
 							</span>

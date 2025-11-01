@@ -4,9 +4,8 @@
 <html lang="en">
 <head runat="server">
 	<meta charset="utf-8" />
-	<title>
-		<asp:ContentPlaceHolder ID="HeadContent" runat="server" />
-	</title>
+	<title>Web Bán Laptop</title>
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- CSS -->
@@ -99,6 +98,31 @@
 			color: white;
 		}
 
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.wrap {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh; /* chiếm toàn chiều cao màn hình */
+		}
+
+		.main {
+			flex: 1; /* đẩy footer xuống đáy khi nội dung ít */
+		}
+
+		/* Footer không cố định, chỉ nằm cuối */
+		.footer {
+			background: #333;
+			color: white;
+			text-align: center;
+			padding: 20px 0;
+			position: relative; /* không fixed hay absolute */
+			width: 100%;
+		}
 	</style>
 	<!-- SweetAlert2 CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
@@ -112,14 +136,14 @@
 			<div class="header_top">
 				<div class="logo">
 					<a href="index.aspx">
-						<img src="images/logo.png" alt="Logo" /></a>
+						<img src="/Home/images/logo.png" alt="Logo" /></a>
 				</div>
 				<div class="header_top_right">
 					<div class="search_box">
 						<asp:TextBox ID="txtSearch" runat="server" CssClass="search-input" Text="Tìm kiếm sản phẩm"
 							onfocus="if(this.value=='Tìm kiếm sản phẩm')this.value='';"
 							onblur="if(this.value=='')this.value='Tìm kiếm sản phẩm';"></asp:TextBox>
-						<asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="search-btn" />
+						<asp:Button ID="btnSearch" runat="server" Text="Tìm kiếm" CssClass="search-btn" OnClick="btnSearch_Click" />
 					</div>
 
 					<div class="shopping_cart">
@@ -132,8 +156,8 @@
 					</div>
 
 					<div class="user_section" runat="server" id="divAuthButtons">
-						<button type="button" style="background-color: #0d6efd;" class="btn-nav" onclick="location.href='/Home/Login.aspx'">Đăng nhập</button>
-						<button type="button" class="btn-nav" onclick="location.href='/Home/Register.aspx'">Đăng ký</button>
+						<button type="button" style="background-color: #0d6efd;" class="btn-nav" onclick="location.href='/Home/Account/Login.aspx'">Đăng nhập</button>
+						<button type="button" class="btn-nav" onclick="location.href='/Home/Account/Register.aspx'">Đăng ký</button>
 					</div>
 
 					<div class="user_section" runat="server" id="divUserInfo" visible="false">
@@ -155,11 +179,11 @@
 			<!-- Menu -->
 			<div class="menu">
 				<ul id="dc_mega-menu-orange" class="dc_mm-orange">
-					<li><a href="index.aspx">Trang chủ</a></li>
-					<li><a href="Products.aspx">Sản phẩm</a></li>
-					<li><a href="Topbrands.aspx">Top brand</a></li>
-					<li><a href="Cart.aspx">Giỏ hàng</a></li>
-					<li><a href="Contact.aspx">Liên hệ</a></li>
+					<li><a href="/Home/index.aspx">Trang chủ</a></li>
+					<li><a href="/Home/Product/Product.aspx">Sản phẩm</a></li>
+					<li><a href="/Home/Product/Topbrand.aspx">Nổi bật</a></li>
+					<li><a href="/Cart.aspx">Giỏ hàng</a></li>
+					<li><a href="/Home/Contact/Contact.aspx">Liên hệ</a></li>
 					<div class="clear"></div>
 				</ul>
 			</div>

@@ -72,10 +72,13 @@
     <Content Include="Admin\User\Delete_User.aspx" />
     <Content Include="Admin\User\Edit_User.aspx" />
     <Content Include="Admin\Site.Master" />
-    <Content Include="Home\Contact.aspx" />
+    <Content Include="Home\Contact\Contact.aspx" />
     <Content Include="Home\index.aspx" />
-    <Content Include="Home\Login.aspx" />
-    <Content Include="Home\Register.aspx" />
+    <Content Include="Home\Account\Login.aspx" />
+    <Content Include="Home\Product\Product.aspx" />
+    <Content Include="Home\Product\ProductDetail.aspx" />
+    <Content Include="Home\Account\Register.aspx" />
+    <Content Include="Home\Product\SearchProduct.aspx" />
     <Content Include="Home\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -87,6 +90,7 @@
   <ItemGroup>
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\User\User.aspx" />
+    <Content Include="Home\Product\Topbrand.aspx" />
     <Content Include="index.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -238,11 +242,11 @@
     <Compile Include="Admin\User\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home\Contact.aspx.cs">
+    <Compile Include="Home\Contact\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home\Contact.aspx.designer.cs">
+    <Compile Include="Home\Contact\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\index.aspx.cs">
@@ -252,19 +256,40 @@
     <Compile Include="Home\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home\Login.aspx.cs">
+    <Compile Include="Home\Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home\Login.aspx.designer.cs">
+    <Compile Include="Home\Account\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Home\Register.aspx.cs">
+    <Compile Include="Home\Product\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Product\ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product\ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Account\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Home\Register.aspx.designer.cs">
+    <Compile Include="Home\Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Product\SearchProduct.aspx.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product\SearchProduct.aspx.designer.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -272,6 +297,13 @@
     </Compile>
     <Compile Include="Home\Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Product\Topbrand.aspx.cs">
+      <DependentUpon>Topbrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product\Topbrand.aspx.designer.cs">
+      <DependentUpon>Topbrand.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

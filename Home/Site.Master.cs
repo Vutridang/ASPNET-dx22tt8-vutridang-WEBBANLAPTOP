@@ -32,6 +32,18 @@ namespace WebBanLapTop.Home
 			}
 		}
 
+		protected void btnSearch_Click(object sender, EventArgs e)
+		{
+			string keyword = txtSearch.Text.Trim();
+
+			if (keyword == "Tìm kiếm sản phẩm" || string.IsNullOrEmpty(keyword))
+				return;
+
+			string encodedKeyword = Server.UrlEncode(keyword);
+			Response.Redirect("~/Home/Product/SearchProduct.aspx?keyword=" + encodedKeyword);
+		}
+
+
 
 		public void ShowToastFromSession(Page page, string sessionKey = "ToastMessage")
 		{

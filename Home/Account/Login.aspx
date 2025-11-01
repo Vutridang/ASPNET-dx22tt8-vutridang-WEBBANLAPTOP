@@ -1,9 +1,5 @@
 ﻿<%@ Page Title="Đăng nhập" Language="C#" MasterPageFile="~/Home/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebBanLapTop.Home.Login" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    Đăng nhập
-</asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="login-page" style="max-width: 400px; margin: 0 auto; padding: 40px 0;">
         <h3 class="text-center" style="text-align:center; margin-bottom:20px;">Đăng nhập tài khoản</h3>

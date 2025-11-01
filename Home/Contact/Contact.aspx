@@ -1,9 +1,5 @@
 ﻿<%@ Page Title="Liên hệ" Language="C#" MasterPageFile="~/Home/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="WebBanLapTop.Home.Contact" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
-    Liên hệ
-</asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <style>
         .contact-container {
