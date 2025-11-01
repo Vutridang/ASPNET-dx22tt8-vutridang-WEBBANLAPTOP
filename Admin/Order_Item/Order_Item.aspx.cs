@@ -33,6 +33,7 @@ namespace WebBanLapTop.Admin.Order_Item
 
 				lblOrderID.Text = orderId.ToString();
 				LoadOrderItems(orderId);
+				LoadCustomerDetails(orderId.ToString());
 
 				// Set tên Admin lên MasterPage
 				SetAdminNameFromSession();
@@ -77,6 +78,38 @@ namespace WebBanLapTop.Admin.Order_Item
 			catch (Exception ex)
 			{
 				throw new Exception("Lỗi khi load chi tiết đơn hàng: " + ex.Message);
+			}
+		}
+
+		private void LoadCustomerDetails(string orderId)
+		{
+			string connStr = ConfigurationManager.ConnectionStrings["WebBanLapTopConnection"].ConnectionString;
+			string query = @"
+                SELECT u.username, u.email, u.role,
+                       ud.address, ud.zipcode, ud.payment_method,
+                       ud.created_at, ud.updated_at
+                FROM [order] o
+                INNER JOIN [user] u ON o.user_id = u.id
+                INNER JOIN user_detail ud ON o.id = ud.order_id AND u.id = ud.user_id
+                WHERE o.id = @orderId";
+
+			using (SqlConnection conn = new SqlConnection(connStr))
+			using (SqlCommand cmd = new SqlCommand(query, conn))
+			{
+				cmd.Parameters.AddWithValue("@orderId", orderId);
+				conn.Open();
+				SqlDataReader reader = cmd.ExecuteReader();
+				if (reader.Read())
+				{
+					lblUsername.Text = reader["username"].ToString();
+					lblEmail.Text = reader["email"].ToString();
+					lblRole.Text = reader["role"].ToString();
+					lblAddress.Text = reader["address"].ToString();
+					lblZipcode.Text = reader["zipcode"].ToString();
+					lblPaymentMethod.Text = reader["payment_method"].ToString();
+					lblCreatedAt.Text = Convert.ToDateTime(reader["created_at"]).ToString("dd/MM/yyyy HH:mm");
+					lblUpdatedAt.Text = Convert.ToDateTime(reader["updated_at"]).ToString("dd/MM/yyyy HH:mm");
+				}
 			}
 		}
 

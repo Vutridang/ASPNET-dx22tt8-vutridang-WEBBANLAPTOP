@@ -124,6 +124,26 @@ UPDATE product SET brand_id = 3 WHERE name LIKE '%Dell%';
 UPDATE product SET brand_id = 4 WHERE name LIKE '%HP%';
 UPDATE product SET brand_id = 5 WHERE name LIKE '%Lenovo%';
 
+CREATE TABLE user_detail (
+    user_id INT NOT NULL,
+    order_id INT NOT NULL,
+    address NVARCHAR(255) NOT NULL,
+    zipcode NVARCHAR(20) NOT NULL,
+    payment_method NVARCHAR(50) NOT NULL,
+    PRIMARY KEY (user_id, order_id),
+    CONSTRAINT FK_userdetail_user FOREIGN KEY (user_id)
+        REFERENCES [user](id) ON DELETE NO ACTION,
+    CONSTRAINT FK_userdetail_order FOREIGN KEY (order_id)
+        REFERENCES [order](id) ON DELETE NO ACTION
+);
 
+ALTER TABLE user_detail
+ADD created_at DATETIME DEFAULT GETDATE(),
+    updated_at DATETIME DEFAULT GETDATE();
+
+
+	INSERT INTO user_detail (user_id, order_id, address, zipcode, payment_method, created_at, updated_at) VALUES
+(2, 3, N'123 Đường ABC, Quận 1, TP.HCM', '700000', N'Thẻ tín dụng', GETDATE(), GETDATE()),
+(2, 4, N'456 Đường XYZ, Quận 3, TP.HCM', '700000', N'Thu COD', GETDATE(), GETDATE());
 
 
