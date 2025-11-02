@@ -71,6 +71,19 @@ namespace WebBanLapTop.Home
 					lblBrand.Text = reader["brand_name"].ToString();
 					lblCategory.Text = reader["category_name"].ToString();  // ✅ Thêm dòng này
 					imgProduct.ImageUrl = reader["image_url"].ToString();
+
+					// ✅ Hiển thị / ẩn nút Mua ngay dựa vào stock
+					int stock = Convert.ToInt32(reader["stock"]);
+					if (stock > 0)
+					{
+						btnAddToCart.Visible = true;
+						lblOutOfStock.Visible = false;
+					}
+					else
+					{
+						btnAddToCart.Visible = false;
+						lblOutOfStock.Visible = true;
+					}
 				}
 			}
 		}

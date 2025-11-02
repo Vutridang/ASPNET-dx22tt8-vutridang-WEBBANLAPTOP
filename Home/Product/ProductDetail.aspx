@@ -64,6 +64,10 @@
 						<asp:Button ID="btnAddToCart" runat="server"
 							CssClass="buysubmit" Text="Mua ngay"
 							OnClick="btnAddToCart_Click" />
+						<asp:Label ID="lblOutOfStock" runat="server"
+							Text="Sản phẩm tạm hết hàng"
+							CssClass="btn-outofstock"
+							Visible="false" />
 					</div>
 
 					<!-- Phần mô tả chi tiết -->

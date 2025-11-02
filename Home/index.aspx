@@ -11,7 +11,7 @@
 				</div>
 				<div class="text list_2_of_1">
 					<h2><%# Eval("name") %></h2>
-					<p><%# Eval("description") %></p>
+					<p><%# TruncateText(Eval("description"), 15) %></p>
 					<div class="button">
 						<span>
 							<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock"))) %>
@@ -49,7 +49,6 @@
 							<span>
 								<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock"))) %>
 							</span>
-
 						</div>
 					</div>
 				</ItemTemplate>

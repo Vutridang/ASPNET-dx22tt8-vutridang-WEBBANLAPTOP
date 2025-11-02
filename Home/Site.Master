@@ -253,6 +253,149 @@
 			.btn-update-qty:hover {
 				background-color: #157347;
 			}
+
+		.btn-outofstock {
+			background-color: #dc3545; /* 🔴 Đỏ tươi giống Bootstrap danger */
+			color: #fff;
+			border: none;
+			padding: 8px 16px;
+			border-radius: 6px;
+			font-weight: 600;
+			font-size: 14px;
+			cursor: not-allowed;
+			opacity: 0.95;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+			transition: all 0.2s ease;
+		}
+
+			.btn-outofstock:hover {
+				background-color: #c82333; /* Đỏ đậm hơn khi hover */
+				opacity: 1;
+			}
+
+		/* Nút Chi tiết */
+		.btn-detail {
+			background-color: #007bff; /* Xanh dương */
+			color: #fff;
+			padding: 8px 14px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			text-decoration: none;
+			cursor: pointer;
+			transition: 0.2s;
+			display: inline-block;
+		}
+
+			.btn-detail:hover {
+				background-color: #0069d9;
+			}
+
+		/* Nút Giỏ hàng */
+		.btn-add {
+			background-color: #28a745; /* Xanh lá */
+			color: #fff;
+			padding: 8px 14px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			text-decoration: none;
+			cursor: pointer;
+			transition: 0.2s;
+			display: inline-block;
+		}
+
+			.btn-add:hover {
+				background-color: #218838;
+			}
+
+		/* Nút Hết hàng */
+		.btn-outofstock {
+			background-color: #dc3545; /* Đỏ */
+			color: #fff;
+			padding: 8px 14px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: not-allowed;
+			display: inline-block;
+			opacity: 0.9;
+		}
+
+			.btn-outofstock:hover {
+				background-color: #c82333;
+			}
+
+		/* Căn giữa trong thẻ .button */
+		.text-center {
+			text-align: center;
+			margin-top: 6px;
+		}
+
+		/* Nút Chi tiết */
+		.detail {
+			background-color: #007bff; /* Xanh dương */
+			color: #fff;
+			padding: 8px 14px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			text-decoration: none;
+			cursor: pointer;
+			transition: 0.2s;
+			display: inline-block;
+		}
+
+			.detail:hover {
+				background-color: #0069d9;
+			}
+
+		/* Nút Giỏ hàng */
+		.add {
+			background-color: #28a745; /* Xanh lá */
+			color: #fff;
+			padding: 8px 14px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			text-decoration: none;
+			cursor: pointer;
+			transition: 0.2s;
+			display: inline-block;
+		}
+
+			.add:hover {
+				background-color: #218838;
+			}
+
+		/* Nút Hết hàng */
+		.btn-outofstock {
+			background-color: #dc3545; /* Đỏ */
+			color: #fff;
+			padding: 8px 14px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 600;
+			cursor: not-allowed;
+			display: inline-block;
+			opacity: 0.9;
+		}
+
+			.btn-outofstock:hover {
+				background-color: #c82333;
+			}
+
+		/* Căn giữa trong thẻ .button */
+		.text-center {
+			text-align: center;
+			margin-top: 6px;
+		}
 	</style>
 	<!-- SweetAlert2 CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">

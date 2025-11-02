@@ -172,7 +172,19 @@ namespace WebBanLapTop.Home
 			if (stock > 0)
 				return $"<a href='/Home/Cart/Cart.aspx?add={id}' onclick=\"event.preventDefault(); addToCart({id});\" class='btn-add'>Giỏ hàng</a>";
 			else
-				return "<button class='details' disabled style='opacity:0.6;cursor:not-allowed;'>Hết hàng</button>";
+				return "<button class='btn-outofstock' disabled>Hết hàng</button>";
+		}
+
+		protected string TruncateText(object textObj, int maxLength)
+		{
+			if (textObj == null)
+				return string.Empty;
+
+			string text = textObj.ToString();
+			if (text.Length <= maxLength)
+				return text;
+
+			return text.Substring(0, maxLength) + "...";
 		}
 
 		private void LoadFeaturedProducts()
