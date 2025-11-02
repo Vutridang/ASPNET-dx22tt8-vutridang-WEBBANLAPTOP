@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Sản phẩm" Language="C#" MasterPageFile="~/Home/Site.Master" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="WebBanLapTop.Home.Products" %>
+﻿<%@ Page Title="Sản phẩm" Language="C#" MasterPageFile="~/Home/Site.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="WebBanLapTop.Home.Products" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<div style="max-width: 1200px; margin: 0 auto; padding: 30px 0;">

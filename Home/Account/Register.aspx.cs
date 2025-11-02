@@ -64,7 +64,7 @@ namespace WebBanLapTop.Home
 				if (rows > 0)
 				{
 					// Đăng ký thành công, chuyển hướng tới trang đăng nhập
-					Response.Redirect("/Home/Login.aspx?register=success");
+					Response.Redirect("/Home/Account/Login.aspx?register=success");
 				}
 				else
 				{
@@ -86,5 +86,65 @@ namespace WebBanLapTop.Home
 				return sb.ToString();
 			}
 		}
+
+		private void SyncCartItemToDatabase(int userId, int productId, int quantity, decimal price)
+		{
+			string connStr = ConfigurationManager.ConnectionStrings["WebBanLapTopConnection"].ConnectionString;
+
+			using (SqlConnection conn = new SqlConnection(connStr))
+			{
+				conn.Open();
+
+				// 1️⃣ Kiểm tra user đã có cart chưa
+				string checkCartSql = "SELECT TOP 1 id FROM cart WHERE user_id=@user_id AND is_checked_out=0";
+				SqlCommand checkCartCmd = new SqlCommand(checkCartSql, conn);
+				checkCartCmd.Parameters.AddWithValue("@user_id", userId);
+				object result = checkCartCmd.ExecuteScalar();
+
+				int cartId;
+				if (result == null)
+				{
+					// 2️⃣ Tạo mới cart nếu chưa có
+					string createCartSql = "INSERT INTO cart (user_id) OUTPUT INSERTED.id VALUES (@user_id)";
+					SqlCommand createCartCmd = new SqlCommand(createCartSql, conn);
+					createCartCmd.Parameters.AddWithValue("@user_id", userId);
+					cartId = (int)createCartCmd.ExecuteScalar();
+				}
+				else
+				{
+					cartId = Convert.ToInt32(result);
+				}
+
+				// 3️⃣ Kiểm tra item trong cart_item
+				string checkItemSql = "SELECT id FROM cart_item WHERE cart_id=@cart_id AND product_id=@product_id";
+				SqlCommand checkItemCmd = new SqlCommand(checkItemSql, conn);
+				checkItemCmd.Parameters.AddWithValue("@cart_id", cartId);
+				checkItemCmd.Parameters.AddWithValue("@product_id", productId);
+				object existingItem = checkItemCmd.ExecuteScalar();
+
+				if (existingItem != null)
+				{
+					// 4️⃣ Cập nhật số lượng
+					string updateSql = "UPDATE cart_item SET quantity = quantity + @quantity WHERE id=@id";
+					SqlCommand updateCmd = new SqlCommand(updateSql, conn);
+					updateCmd.Parameters.AddWithValue("@quantity", quantity);
+					updateCmd.Parameters.AddWithValue("@id", (int)existingItem);
+					updateCmd.ExecuteNonQuery();
+				}
+				else
+				{
+					// 5️⃣ Thêm mới item
+					string insertSql = @"INSERT INTO cart_item (cart_id, product_id, quantity, price_at_time)
+                                 VALUES (@cart_id, @product_id, @quantity, @price)";
+					SqlCommand insertCmd = new SqlCommand(insertSql, conn);
+					insertCmd.Parameters.AddWithValue("@cart_id", cartId);
+					insertCmd.Parameters.AddWithValue("@product_id", productId);
+					insertCmd.Parameters.AddWithValue("@quantity", quantity);
+					insertCmd.Parameters.AddWithValue("@price", price);
+					insertCmd.ExecuteNonQuery();
+				}
+			}
+		}
+
 	}
 }

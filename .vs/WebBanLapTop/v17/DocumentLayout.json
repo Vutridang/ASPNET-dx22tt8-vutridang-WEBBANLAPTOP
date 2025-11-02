@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\aspnet-dx22tt8-vutridang-webbanlaptop\\admin\\order_item\\order_item.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\order_item\\order_item.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\aspnet-dx22tt8-vutridang-webbanlaptop\\admin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:admin\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\aspnet-dx22tt8-vutridang-webbanlaptop\\home\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\productdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|d:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\aspnet-dx22tt8-vutridang-webbanlaptop\\home\\product\\productdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\productdetail.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\productbycategory.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\productbycategory.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\productbycategory.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\productbycategory.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\searchproduct.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\searchproduct.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\productdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\productdetail.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\product.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\product.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\cart\\cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\cart\\cart.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\topbrand.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\topbrand.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\product\\product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\product\\product.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\home\\cart\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}|WebBanLapTop.csproj|solutionrelative:home\\cart\\cart.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,118 +70,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Order_Item.aspx",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Admin\\Order_Item\\Order_Item.aspx",
-              "RelativeDocumentMoniker": "Admin\\Order_Item\\Order_Item.aspx",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Admin\\Order_Item\\Order_Item.aspx",
-              "RelativeToolTip": "Admin\\Order_Item\\Order_Item.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-01T21:47:15.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Admin\\Login.aspx",
-              "RelativeDocumentMoniker": "Admin\\Login.aspx",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Admin\\Login.aspx",
-              "RelativeToolTip": "Admin\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-01T21:46:13.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductByCategory.aspx.cs",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductByCategory.aspx.cs",
-              "RelativeDocumentMoniker": "Home\\Product\\ProductByCategory.aspx.cs",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductByCategory.aspx.cs",
-              "RelativeToolTip": "Home\\Product\\ProductByCategory.aspx.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAwwBoAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T20:30:34.071Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductByCategory.aspx",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductByCategory.aspx",
-              "RelativeDocumentMoniker": "Home\\Product\\ProductByCategory.aspx",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductByCategory.aspx",
-              "RelativeToolTip": "Home\\Product\\ProductByCategory.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-01T20:30:13.671Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SearchProduct.aspx",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\SearchProduct.aspx",
-              "RelativeDocumentMoniker": "Home\\Product\\SearchProduct.aspx",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\SearchProduct.aspx",
-              "RelativeToolTip": "Home\\Product\\SearchProduct.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-01T18:18:48.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductDetail.aspx.cs",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx.cs",
-              "RelativeDocumentMoniker": "Home\\Product\\ProductDetail.aspx.cs",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx.cs",
-              "RelativeToolTip": "Home\\Product\\ProductDetail.aspx.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAwwEoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-01T17:47:34.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductDetail.aspx",
-              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx",
-              "RelativeDocumentMoniker": "Home\\Product\\ProductDetail.aspx",
-              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx",
-              "RelativeToolTip": "Home\\Product\\ProductDetail.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-01T17:47:18.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "index.aspx.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\index.aspx.cs",
               "RelativeDocumentMoniker": "Home\\index.aspx.cs",
               "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\index.aspx.cs",
               "RelativeToolTip": "Home\\index.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAgwDoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T15:24:23.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-02T17:18:10.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
+              "Title": "index.aspx",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\index.aspx",
+              "RelativeDocumentMoniker": "Home\\index.aspx",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\index.aspx",
+              "RelativeToolTip": "Home\\index.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-02T17:18:05.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Site.Master.cs",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Site.Master.cs",
               "RelativeDocumentMoniker": "Home\\Site.Master.cs",
               "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Site.Master.cs",
               "RelativeToolTip": "Home\\Site.Master.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAkwE0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:32:38.155Z"
+              "WhenOpened": "2025-11-02T16:57:52.792Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Site.Master",
               "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Site.Master",
               "RelativeDocumentMoniker": "Home\\Site.Master",
@@ -185,7 +114,92 @@
               "RelativeToolTip": "Home\\Site.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-10-31T14:30:13.745Z"
+              "WhenOpened": "2025-11-02T16:55:02.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductDetail.aspx.cs",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx.cs",
+              "RelativeDocumentMoniker": "Home\\Product\\ProductDetail.aspx.cs",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx.cs",
+              "RelativeToolTip": "Home\\Product\\ProductDetail.aspx.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAAHcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T16:38:43.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductDetail.aspx",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx",
+              "RelativeDocumentMoniker": "Home\\Product\\ProductDetail.aspx",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\ProductDetail.aspx",
+              "RelativeToolTip": "Home\\Product\\ProductDetail.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-02T16:33:39.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Topbrand.aspx",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\Topbrand.aspx",
+              "RelativeDocumentMoniker": "Home\\Product\\Topbrand.aspx",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\Topbrand.aspx",
+              "RelativeToolTip": "Home\\Product\\Topbrand.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-02T16:31:27.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Product.aspx",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\Product.aspx",
+              "RelativeDocumentMoniker": "Home\\Product\\Product.aspx",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\Product.aspx",
+              "RelativeToolTip": "Home\\Product\\Product.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-02T16:30:49.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.aspx.cs",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\Product.aspx.cs",
+              "RelativeDocumentMoniker": "Home\\Product\\Product.aspx.cs",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Product\\Product.aspx.cs",
+              "RelativeToolTip": "Home\\Product\\Product.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T16:30:45.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cart.aspx.cs",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Cart\\Cart.aspx.cs",
+              "RelativeDocumentMoniker": "Home\\Cart\\Cart.aspx.cs",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Cart\\Cart.aspx.cs",
+              "RelativeToolTip": "Home\\Cart\\Cart.aspx.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-02T16:13:30.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cart.aspx",
+              "DocumentMoniker": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Cart\\Cart.aspx",
+              "RelativeDocumentMoniker": "Home\\Cart\\Cart.aspx",
+              "ToolTip": "D:\\gi\u00E1o tr\u00ECnh h\u1ECDc \u0111\u1EA1i h\u1ECDc\\chuyen de asp.net\\ASPNET-dx22tt8-vutridang-WEBBANLAPTOP\\Home\\Cart\\Cart.aspx",
+              "RelativeToolTip": "Home\\Cart\\Cart.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-02T16:12:49.633Z"
             }
           ]
         }

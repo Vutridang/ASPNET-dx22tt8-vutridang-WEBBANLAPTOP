@@ -72,6 +72,7 @@
     <Content Include="Admin\User\Delete_User.aspx" />
     <Content Include="Admin\User\Edit_User.aspx" />
     <Content Include="Admin\Site.Master" />
+    <Content Include="Home\Cart\Cart.aspx" />
     <Content Include="Home\Contact\Contact.aspx" />
     <Content Include="Home\index.aspx" />
     <Content Include="Home\Account\Login.aspx" />
@@ -242,6 +243,14 @@
     </Compile>
     <Compile Include="Admin\User\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\CartItem.cs" />
+    <Compile Include="Home\Cart\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Cart\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Contact\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

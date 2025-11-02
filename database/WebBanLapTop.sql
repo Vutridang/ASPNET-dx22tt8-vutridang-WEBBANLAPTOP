@@ -146,4 +146,24 @@ ADD created_at DATETIME DEFAULT GETDATE(),
 (2, 3, N'123 Đường ABC, Quận 1, TP.HCM', '700000', N'Thẻ tín dụng', GETDATE(), GETDATE()),
 (2, 4, N'456 Đường XYZ, Quận 3, TP.HCM', '700000', N'Thu COD', GETDATE(), GETDATE());
 
+CREATE TABLE cart (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    user_id INT NOT NULL,
+    created_at DATETIME DEFAULT GETDATE(),
+    updated_at DATETIME DEFAULT GETDATE(),
+    is_checked_out BIT DEFAULT 0,  -- 0 = chưa thanh toán, 1 = đã chuyển thành đơn hàng
+    CONSTRAINT FK_cart_user FOREIGN KEY (user_id)
+        REFERENCES [user](id) ON DELETE CASCADE
+);
 
+CREATE TABLE cart_item (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    cart_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT DEFAULT 1,
+    price_at_time DECIMAL(10,2) NOT NULL,  -- giá tại thời điểm thêm
+    CONSTRAINT FK_cartitem_cart FOREIGN KEY (cart_id)
+        REFERENCES cart(id) ON DELETE CASCADE,
+    CONSTRAINT FK_cartitem_product FOREIGN KEY (product_id)
+        REFERENCES product(id)
+);

@@ -14,7 +14,7 @@
 					<p><%# Eval("description") %></p>
 					<div class="button">
 						<span>
-							<a href='cart.aspx?add=<%# Eval("id") %>' class="details">Giỏ hàng</a>
+							<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock"))) %>
 						</span>
 					</div>
 				</div>
@@ -47,13 +47,20 @@
 								<a href='/Home/Product/ProductDetail.aspx?id=<%# Eval("id") %>' class="details">Chi tiết</a>
 							</span>
 							<span>
-								<a href='cart.aspx?add=<%# Eval("id") %>' class="details">Giỏ hàng</a>
+								<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock"))) %>
 							</span>
+
 						</div>
 					</div>
 				</ItemTemplate>
 			</asp:Repeater>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function addToCart(productId) {
+			// Gửi request đến index.aspx để thêm giỏ hàng
+			window.location.href = 'index.aspx?add=' + productId;
+		}
+	</script>
 </asp:Content>
 
