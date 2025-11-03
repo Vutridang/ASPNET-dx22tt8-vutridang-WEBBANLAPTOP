@@ -1,30 +1,29 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Home/Site.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="WebBanLapTop.Home.index" %>
-
 <asp:Content ID="FeaturedProductsContent" ContentPlaceHolderID="FeaturedProducts" runat="server">
-	<asp:Repeater ID="rptFeaturedProducts" runat="server">
-		<ItemTemplate>
-			<div class="listview_1_of_2 images_1_of_2">
-				<div class="listimg listimg_2_of_1">
-					<a href='product_detail.aspx?id=<%# Eval("id") %>'>
-						<img src='<%# Eval("image_url") %>' alt='<%# Eval("name") %>' />
-					</a>
-				</div>
-				<div class="text list_2_of_1">
-					<h2><%# Eval("name") %></h2>
-					<p><%# TruncateText(Eval("description"), 15) %></p>
-					<div class="button">
+	<div class="featured-wrapper">
+		<asp:Repeater ID="rptFeaturedProducts" runat="server">
+			<ItemTemplate>
+				<div class="product-box">
+					<div class="product-img">
+						<a href='product_detail.aspx?id=<%# Eval("id") %>'>
+							<img src='<%# Eval("image_url") %>' alt='<%# Eval("name") %>' />
+						</a>
+					</div>
+					<div class="product-info">
+						<h3><%# Eval("name") %></h3>
+						<p class="desc"><%# Eval("description") %></p>
+						<div class="price">
+							<span class="price-text"><%# String.Format("{0:N0}₫", Eval("price")) %></span>
+						</div>
 						<span>
-							<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock"))) %>
+							<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock")), "FeaturedProductsContent") %>
 						</span>
 					</div>
 				</div>
-			</div>
-		</ItemTemplate>
-	</asp:Repeater>
+			</ItemTemplate>
+		</asp:Repeater>
+	</div>
 </asp:Content>
-
-
-
 
 <asp:Content ID="MainContentContent" ContentPlaceHolderID="MainContent" runat="server">
 	<div class="content_bottom">
@@ -44,10 +43,12 @@
 						<p><span class="price"><%# String.Format("{0:N0}₫", Eval("price")) %></span></p>
 						<div class="button">
 							<span>
-								<a href='/Home/Product/ProductDetail.aspx?id=<%# Eval("id") %>' class="details">Chi tiết</a>
+								<a href='/Home/Product/ProductDetail.aspx?id=<%# Eval("id") %>' style="background: #0d6efd; color: white; padding: 8px 14px; border: none; border-radius: 5px; font-size: 14px; font-weight: 600; cursor: not-allowed; display: inline-block; opacity: 0.9;"
+									onmouseover="this.style.background='#0b5ed7';"
+									onmouseout="this.style.background='#0d6efd';">Chi tiết</a>
 							</span>
 							<span>
-								<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock"))) %>
+								<%# RenderAddToCartButton((int)Eval("id"), Convert.ToInt32(Eval("stock")), "MainContentContent") %>
 							</span>
 						</div>
 					</div>

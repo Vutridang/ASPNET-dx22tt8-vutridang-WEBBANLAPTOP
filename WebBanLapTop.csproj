@@ -1,365 +1,367 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}</ProjectGuid>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebBanLapTop</RootNamespace>
-    <AssemblyName>WebBanLapTop</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
-    <IISExpressSSLPort>44343</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
-    <UseGlobalApplicationHostFile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Admin\Brand\Brand.aspx" />
-    <Content Include="Admin\Brand\Create_Brand.aspx" />
-    <Content Include="Admin\Brand\Delete_Brand.aspx" />
-    <Content Include="Admin\Brand\Edit_Brand.aspx" />
-    <Content Include="Admin\Category\Category.aspx" />
-    <Content Include="Admin\Category\Create_Category.aspx" />
-    <Content Include="Admin\Category\Delete_Category.aspx" />
-    <Content Include="Admin\Category\Edit_Category.aspx" />
-    <Content Include="Admin\Order\Order.aspx" />
-    <Content Include="Admin\Order_Item\Order_Item.aspx" />
-    <Content Include="Admin\Product\Create_Product.aspx" />
-    <Content Include="Admin\Product\Delete_Product.aspx" />
-    <Content Include="Admin\Product\Edit_Product.aspx" />
-    <Content Include="Admin\Product\Product.aspx" />
-    <Content Include="Admin\User\Create_User.aspx" />
-    <Content Include="Admin\Dashboard.aspx" />
-    <Content Include="Admin\User\Delete_User.aspx" />
-    <Content Include="Admin\User\Edit_User.aspx" />
-    <Content Include="Admin\Site.Master" />
-    <Content Include="Home\Cart\Cart.aspx" />
-    <Content Include="Home\Contact\Contact.aspx" />
-    <Content Include="Home\index.aspx" />
-    <Content Include="Home\Account\Login.aspx" />
-    <Content Include="Home\Product\Product.aspx" />
-    <Content Include="Home\Product\ProductByCategory.aspx" />
-    <Content Include="Home\Product\ProductDetail.aspx" />
-    <Content Include="Home\Account\Register.aspx" />
-    <Content Include="Home\Product\SearchProduct.aspx" />
-    <Content Include="Home\Site.Master" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Admin\Login.aspx" />
-    <Content Include="Admin\User\User.aspx" />
-    <Content Include="Home\Product\Topbrand.aspx" />
-    <Content Include="index.aspx" />
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Admin\Brand\Brand.aspx.cs">
-      <DependentUpon>Brand.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Brand\Brand.aspx.designer.cs">
-      <DependentUpon>Brand.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Brand\Create_Brand.aspx.cs">
-      <DependentUpon>Create_Brand.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Brand\Create_Brand.aspx.designer.cs">
-      <DependentUpon>Create_Brand.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Brand\Delete_Brand.aspx.cs">
-      <DependentUpon>Delete_Brand.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Brand\Delete_Brand.aspx.designer.cs">
-      <DependentUpon>Delete_Brand.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Brand\Edit_Brand.aspx.cs">
-      <DependentUpon>Edit_Brand.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Brand\Edit_Brand.aspx.designer.cs">
-      <DependentUpon>Edit_Brand.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Category\Category.aspx.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Category\Category.aspx.designer.cs">
-      <DependentUpon>Category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Category\Create_Category.aspx.cs">
-      <DependentUpon>Create_Category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Category\Create_Category.aspx.designer.cs">
-      <DependentUpon>Create_Category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Category\Delete_Category.aspx.cs">
-      <DependentUpon>Delete_Category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Category\Delete_Category.aspx.designer.cs">
-      <DependentUpon>Delete_Category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Category\Edit_Category.aspx.cs">
-      <DependentUpon>Edit_Category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Category\Edit_Category.aspx.designer.cs">
-      <DependentUpon>Edit_Category.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Order\Order.aspx.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Order\Order.aspx.designer.cs">
-      <DependentUpon>Order.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Order_Item\Order_Item.aspx.cs">
-      <DependentUpon>Order_Item.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Order_Item\Order_Item.aspx.designer.cs">
-      <DependentUpon>Order_Item.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Product\Create_Product.aspx.cs">
-      <DependentUpon>Create_Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Product\Create_Product.aspx.designer.cs">
-      <DependentUpon>Create_Product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Product\Delete_Product.aspx.cs">
-      <DependentUpon>Delete_Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Product\Delete_Product.aspx.designer.cs">
-      <DependentUpon>Delete_Product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Product\Edit_Product.aspx.cs">
-      <DependentUpon>Edit_Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Product\Edit_Product.aspx.designer.cs">
-      <DependentUpon>Edit_Product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Product\Product.aspx.cs">
-      <DependentUpon>Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Product\Product.aspx.designer.cs">
-      <DependentUpon>Product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\User\Create_User.aspx.cs">
-      <DependentUpon>Create_User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\User\Create_User.aspx.designer.cs">
-      <DependentUpon>Create_User.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\User\Delete_User.aspx.cs">
-      <DependentUpon>Delete_User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\User\Delete_User.aspx.designer.cs">
-      <DependentUpon>Delete_User.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\User\Edit_User.aspx.cs">
-      <DependentUpon>Edit_User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\User\Edit_User.aspx.designer.cs">
-      <DependentUpon>Edit_User.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\User\User.aspx.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin\User\User.aspx.designer.cs">
-      <DependentUpon>User.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="App_Code\CartItem.cs" />
-    <Compile Include="Home\Cart\Cart.aspx.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Cart\Cart.aspx.designer.cs">
-      <DependentUpon>Cart.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Contact\Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Contact\Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Product\Product.aspx.cs">
-      <DependentUpon>Product.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Product\Product.aspx.designer.cs">
-      <DependentUpon>Product.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Product\ProductByCategory.aspx.cs">
-      <DependentUpon>ProductByCategory.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Product\ProductByCategory.aspx.designer.cs">
-      <DependentUpon>ProductByCategory.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Product\ProductDetail.aspx.cs">
-      <DependentUpon>ProductDetail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Product\ProductDetail.aspx.designer.cs">
-      <DependentUpon>ProductDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Product\SearchProduct.aspx.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Product\SearchProduct.aspx.designer.cs">
-      <DependentUpon>SearchProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Home\Product\Topbrand.aspx.cs">
-      <DependentUpon>Topbrand.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Home\Product\Topbrand.aspx.designer.cs">
-      <DependentUpon>Topbrand.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="images\" />
-  </ItemGroup>
-  <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
-        <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1611</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44343/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-        </WebProjectProperties>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+		<ProductVersion>
+		</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectGuid>{67583B2E-C8CC-4FF7-A3C2-D09188F0C7D6}</ProjectGuid>
+		<ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+		<OutputType>Library</OutputType>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<RootNamespace>WebBanLapTop</RootNamespace>
+		<AssemblyName>WebBanLapTop</AssemblyName>
+		<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+		<UseIISExpress>true</UseIISExpress>
+		<Use64BitIISExpress />
+		<IISExpressSSLPort>44343</IISExpressSSLPort>
+		<IISExpressAnonymousAuthentication />
+		<IISExpressWindowsAuthentication />
+		<IISExpressUseClassicPipelineMode />
+		<UseGlobalApplicationHostFile />
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+		<Reference Include="System.Data" />
+		<Reference Include="System.Core" />
+		<Reference Include="System.Data.DataSetExtensions" />
+		<Reference Include="System.Web.Extensions" />
+		<Reference Include="System.Xml.Linq" />
+		<Reference Include="System.Drawing" />
+		<Reference Include="System.Web" />
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Web.Services" />
+		<Reference Include="System.EnterpriseServices" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="Admin\Brand\Brand.aspx" />
+		<Content Include="Admin\Brand\Create_Brand.aspx" />
+		<Content Include="Admin\Brand\Delete_Brand.aspx" />
+		<Content Include="Admin\Brand\Edit_Brand.aspx" />
+		<Content Include="Admin\Category\Category.aspx" />
+		<Content Include="Admin\Category\Create_Category.aspx" />
+		<Content Include="Admin\Category\Delete_Category.aspx" />
+		<Content Include="Admin\Category\Edit_Category.aspx" />
+		<Content Include="Admin\Order\Order.aspx" />
+		<Content Include="Admin\Order_Item\Order_Item.aspx" />
+		<Content Include="Admin\Product\Create_Product.aspx" />
+		<Content Include="Admin\Product\Delete_Product.aspx" />
+		<Content Include="Admin\Product\Edit_Product.aspx" />
+		<Content Include="Admin\Product\Product.aspx" />
+		<Content Include="Admin\User\Create_User.aspx" />
+		<Content Include="Admin\Dashboard.aspx" />
+		<Content Include="Admin\User\Delete_User.aspx" />
+		<Content Include="Admin\User\Edit_User.aspx" />
+		<Content Include="Admin\Site.Master" />
+		<Content Include="Home\Cart\Cart.aspx" />
+		<Content Include="Home\Contact\Contact.aspx" />
+		<Content Include="Home\index.aspx" />
+		<Content Include="Home\Account\Login.aspx" />
+		<Content Include="Home\Product\Product.aspx" />
+		<Content Include="Home\Product\ProductByCategory.aspx" />
+		<Content Include="Home\Product\ProductDetail.aspx" />
+		<Content Include="Home\Account\Register.aspx" />
+		<Content Include="Home\Product\SearchProduct.aspx" />
+		<Content Include="Home\Site.Master" />
+		<None Include="Web.Debug.config">
+			<DependentUpon>Web.config</DependentUpon>
+		</None>
+		<None Include="Web.Release.config">
+			<DependentUpon>Web.config</DependentUpon>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="Admin\Login.aspx" />
+		<Content Include="Admin\User\User.aspx" />
+		<Content Include="Home\Product\Topbrand.aspx" />
+		<Content Include="index.aspx" />
+		<Content Include="Web.config" />
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include="Admin\Brand\Brand.aspx.cs">
+			<DependentUpon>Brand.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Brand\Brand.aspx.designer.cs">
+			<DependentUpon>Brand.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Brand\Create_Brand.aspx.cs">
+			<DependentUpon>Create_Brand.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Brand\Create_Brand.aspx.designer.cs">
+			<DependentUpon>Create_Brand.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Brand\Delete_Brand.aspx.cs">
+			<DependentUpon>Delete_Brand.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Brand\Delete_Brand.aspx.designer.cs">
+			<DependentUpon>Delete_Brand.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Brand\Edit_Brand.aspx.cs">
+			<DependentUpon>Edit_Brand.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Brand\Edit_Brand.aspx.designer.cs">
+			<DependentUpon>Edit_Brand.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Category\Category.aspx.cs">
+			<DependentUpon>Category.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Category\Category.aspx.designer.cs">
+			<DependentUpon>Category.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Category\Create_Category.aspx.cs">
+			<DependentUpon>Create_Category.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Category\Create_Category.aspx.designer.cs">
+			<DependentUpon>Create_Category.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Category\Delete_Category.aspx.cs">
+			<DependentUpon>Delete_Category.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Category\Delete_Category.aspx.designer.cs">
+			<DependentUpon>Delete_Category.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Category\Edit_Category.aspx.cs">
+			<DependentUpon>Edit_Category.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Category\Edit_Category.aspx.designer.cs">
+			<DependentUpon>Edit_Category.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Order\Order.aspx.cs">
+			<DependentUpon>Order.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Order\Order.aspx.designer.cs">
+			<DependentUpon>Order.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Order_Item\Order_Item.aspx.cs">
+			<DependentUpon>Order_Item.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Order_Item\Order_Item.aspx.designer.cs">
+			<DependentUpon>Order_Item.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Product\Create_Product.aspx.cs">
+			<DependentUpon>Create_Product.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Product\Create_Product.aspx.designer.cs">
+			<DependentUpon>Create_Product.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Product\Delete_Product.aspx.cs">
+			<DependentUpon>Delete_Product.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Product\Delete_Product.aspx.designer.cs">
+			<DependentUpon>Delete_Product.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Product\Edit_Product.aspx.cs">
+			<DependentUpon>Edit_Product.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Product\Edit_Product.aspx.designer.cs">
+			<DependentUpon>Edit_Product.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Product\Product.aspx.cs">
+			<DependentUpon>Product.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Product\Product.aspx.designer.cs">
+			<DependentUpon>Product.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\User\Create_User.aspx.cs">
+			<DependentUpon>Create_User.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\User\Create_User.aspx.designer.cs">
+			<DependentUpon>Create_User.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Dashboard.aspx.cs">
+			<DependentUpon>Dashboard.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Dashboard.aspx.designer.cs">
+			<DependentUpon>Dashboard.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\User\Delete_User.aspx.cs">
+			<DependentUpon>Delete_User.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\User\Delete_User.aspx.designer.cs">
+			<DependentUpon>Delete_User.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\User\Edit_User.aspx.cs">
+			<DependentUpon>Edit_User.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\User\Edit_User.aspx.designer.cs">
+			<DependentUpon>Edit_User.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Login.aspx.cs">
+			<DependentUpon>Login.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Login.aspx.designer.cs">
+			<DependentUpon>Login.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\Site.Master.cs">
+			<DependentUpon>Site.Master</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\Site.Master.designer.cs">
+			<DependentUpon>Site.Master</DependentUpon>
+		</Compile>
+		<Compile Include="Admin\User\User.aspx.cs">
+			<DependentUpon>User.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Admin\User\User.aspx.designer.cs">
+			<DependentUpon>User.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Cart\Cart.aspx.cs">
+			<DependentUpon>Cart.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Cart\Cart.aspx.designer.cs">
+			<DependentUpon>Cart.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Contact\Contact.aspx.cs">
+			<DependentUpon>Contact.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Contact\Contact.aspx.designer.cs">
+			<DependentUpon>Contact.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\index.aspx.cs">
+			<DependentUpon>index.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\index.aspx.designer.cs">
+			<DependentUpon>index.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Account\Login.aspx.cs">
+			<DependentUpon>Login.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Account\Login.aspx.designer.cs">
+			<DependentUpon>Login.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Product\Product.aspx.cs">
+			<DependentUpon>Product.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Product\Product.aspx.designer.cs">
+			<DependentUpon>Product.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Product\ProductByCategory.aspx.cs">
+			<DependentUpon>ProductByCategory.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Product\ProductByCategory.aspx.designer.cs">
+			<DependentUpon>ProductByCategory.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Product\ProductDetail.aspx.cs">
+			<DependentUpon>ProductDetail.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Product\ProductDetail.aspx.designer.cs">
+			<DependentUpon>ProductDetail.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Account\Register.aspx.cs">
+			<DependentUpon>Register.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Account\Register.aspx.designer.cs">
+			<DependentUpon>Register.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Product\SearchProduct.aspx.cs">
+			<DependentUpon>SearchProduct.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Product\SearchProduct.aspx.designer.cs">
+			<DependentUpon>SearchProduct.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="App_Code\CartItem.cs" />
+		<Compile Include="App_Code\InsufficientItem.cs" />
+		<Compile Include="App_Code\ProductStockInfo.cs" />
+		<Compile Include="Home\Site.Master.cs">
+			<DependentUpon>Site.Master</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Site.Master.designer.cs">
+			<DependentUpon>Site.Master</DependentUpon>
+		</Compile>
+		<Compile Include="Home\Product\Topbrand.aspx.cs">
+			<DependentUpon>Topbrand.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="Home\Product\Topbrand.aspx.designer.cs">
+			<DependentUpon>Topbrand.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="index.aspx.cs">
+			<DependentUpon>index.aspx</DependentUpon>
+			<SubType>ASPXCodeBehind</SubType>
+		</Compile>
+		<Compile Include="index.aspx.designer.cs">
+			<DependentUpon>index.aspx</DependentUpon>
+		</Compile>
+		<Compile Include="Properties\AssemblyInfo.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="images\" />
+	</ItemGroup>
+	<PropertyGroup>
+		<VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+		<VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+	</PropertyGroup>
+	<Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+	<Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+	<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+	<ProjectExtensions>
+		<VisualStudio>
+			<FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+				<WebProjectProperties>
+					<UseIIS>True</UseIIS>
+					<AutoAssignPort>True</AutoAssignPort>
+					<DevelopmentServerPort>1611</DevelopmentServerPort>
+					<DevelopmentServerVPath>/</DevelopmentServerVPath>
+					<IISUrl>https://localhost:44343/</IISUrl>
+					<NTLMAuthentication>False</NTLMAuthentication>
+					<UseCustomServer>False</UseCustomServer>
+					<CustomServerUrl>
+					</CustomServerUrl>
+					<SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+				</WebProjectProperties>
+			</FlavorProperties>
+		</VisualStudio>
+	</ProjectExtensions>
+	<!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

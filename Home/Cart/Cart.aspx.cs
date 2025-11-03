@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebBanLapTop;
@@ -190,26 +191,29 @@ namespace WebBanLapTop
 
 			if (e.CommandName == "UpdateItem")
 			{
-				string qtyKey = "qty_" + productId;
-				string newQtyValue = Request.Form[qtyKey];
-				int newQty;
-
-				if (int.TryParse(newQtyValue, out newQty) && newQty > 0)
+				// Tìm dòng đang bấm nút
+				GridViewRow row = ((Control)e.CommandSource).NamingContainer as GridViewRow;
+				if (row != null)
 				{
-					var item = cart.FirstOrDefault(x => x.ProductId == productId);
-					if (item != null)
+					// Tìm ô input trong dòng
+					TextBox txtQty = row.FindControl("txtQty") as TextBox;
+					int newQty;
+					if (txtQty != null && int.TryParse(txtQty.Text, out newQty) && newQty > 0)
 					{
-						item.Quantity = newQty;
+						var item = cart.FirstOrDefault(x => x.ProductId == productId);
+						if (item != null)
+						{
+							item.Quantity = newQty;
+							if (Session["UserId"] != null)
+								UpdateCartItemInDatabase(Convert.ToInt32(Session["UserId"]), productId, newQty);
 
-						if (Session["UserId"] != null)
-							UpdateCartItemInDatabase(Convert.ToInt32(Session["UserId"]), productId, newQty);
-
-						toastMessage = "Cập nhật số lượng thành công!";
+							toastMessage = "Cập nhật số lượng thành công!";
+						}
 					}
-				}
-				else
-				{
-					toastMessage = "Số lượng không hợp lệ!";
+					else
+					{
+						toastMessage = "Số lượng không hợp lệ!";
+					}
 				}
 			}
 			else if (e.CommandName == "RemoveItem")
@@ -268,5 +272,195 @@ namespace WebBanLapTop
 				cmd.ExecuteNonQuery();
 			}
 		}
+
+		protected void btnCheckout_Click(object sender, EventArgs e)
+		{
+			// ✅ Trường hợp chưa đăng nhập
+			if (Session["UserId"] == null)
+			{
+				Session["ToastMessage"] = "Vui lòng đăng nhập để tiếp tục thanh toán.";
+				Response.Redirect("/Home/Account/Login.aspx");
+				return;
+			}
+
+			// ✅ Lấy giỏ hàng
+			List<CartItem> cart = Session["Cart"] as List<CartItem>;
+			if (cart == null || cart.Count == 0)
+			{
+				Session["ToastMessage"] = "Giỏ hàng của bạn đang trống.";
+				Response.Redirect(Request.RawUrl);
+				return;
+			}
+
+			// ✅ Danh sách sản phẩm
+			List<int> productIds = new List<int>();
+			foreach (CartItem item in cart)
+			{
+				if (!productIds.Contains(item.ProductId))
+					productIds.Add(item.ProductId);
+			}
+
+			if (productIds.Count == 0)
+			{
+				Session["ToastMessage"] = "Giỏ hàng của bạn đang trống.";
+				Response.Redirect(Request.RawUrl);
+				return;
+			}
+
+			List<InsufficientItem> insufficient = new List<InsufficientItem>();
+
+			using (SqlConnection conn = new SqlConnection(connectionString))
+			{
+				conn.Open();
+
+				// Tạo danh sách param cho IN clause
+				string[] paramNames = new string[productIds.Count];
+				for (int i = 0; i < productIds.Count; i++)
+					paramNames[i] = "@p" + i;
+
+				string sql = @"
+					SELECT 
+						p.id,
+						p.stock,
+						p.image_url,
+						p.name,
+						ISNULL(SUM(oi.quantity), 0) AS reserved_qty
+					FROM product p
+					LEFT JOIN order_item oi ON oi.product_id = p.id
+					LEFT JOIN [order] o ON oi.order_id = o.id
+						AND o.status IN ('pending', 'paid')  -- chỉ trừ khi đơn chưa giao
+					WHERE p.id IN (" + string.Join(",", paramNames) + @")
+					GROUP BY p.id, p.stock, p.image_url, p.name";
+
+				SqlCommand cmd = new SqlCommand(sql, conn);
+				for (int i = 0; i < productIds.Count; i++)
+					cmd.Parameters.AddWithValue(paramNames[i], productIds[i]);
+
+				Dictionary<int, ProductStockInfo> productInfo = new Dictionary<int, ProductStockInfo>();
+				SqlDataReader reader = cmd.ExecuteReader();
+
+				while (reader.Read())
+				{
+					int id = reader.GetInt32(0);
+					int stock = reader.IsDBNull(1) ? 0 : reader.GetInt32(1);
+					string image = reader.IsDBNull(2) ? "/Home/images/no_image.png" : reader.GetString(2);
+					string name = reader.IsDBNull(3) ? ("Sản phẩm " + id) : reader.GetString(3);
+					int reserved = reader.IsDBNull(4) ? 0 : reader.GetInt32(4);
+
+					ProductStockInfo info = new ProductStockInfo
+					{
+						Stock = stock - reserved,  // 🔥 tồn kho khả dụng = stock - reserved
+						Image = image,
+						Name = name
+					};
+
+					productInfo.Add(id, info);
+				}
+				reader.Close();
+
+				// 🧮 So sánh số lượng trong giỏ hàng với tồn kho khả dụng
+				foreach (CartItem item in cart)
+				{
+					// Nếu sản phẩm không tồn tại trong DB → coi như hết hàng
+					if (!productInfo.ContainsKey(item.ProductId))
+					{
+						insufficient.Add(new InsufficientItem
+						{
+							Name = "(Mã " + item.ProductId + ") không tồn tại",
+							Image = "/Home/images/no_image.png",
+							Stock = 0
+						});
+						continue;
+					}
+
+					// Lấy thông tin tồn kho thực tế
+					ProductStockInfo info = productInfo[item.ProductId];
+
+					// Nếu số lượng trong giỏ lớn hơn tồn kho khả dụng → thêm vào danh sách thiếu
+					if (item.Quantity > info.Stock)
+					{
+						insufficient.Add(new InsufficientItem
+						{
+							Name = info.Name,
+							Image = info.Image,
+							Stock = info.Stock
+						});
+					}
+				}
+			}
+
+			// ✅ Nếu có thiếu hàng → hiển thị SweetAlert popup thay cho modal HTML
+			// ✅ Nếu có thiếu hàng → hiển thị SweetAlert popup thay cho modal HTML
+			if (insufficient.Count > 0)
+			{
+				System.Text.StringBuilder sb = new System.Text.StringBuilder();
+				foreach (var x in insufficient)
+				{
+					sb.Append("<tr>");
+					sb.Append("<td style='border:1px solid #ddd; text-align:center; padding:8px;'>");
+					sb.Append("<img src='" + HttpUtility.HtmlAttributeEncode(x.Image) + "' style='width:60px; height:60px; object-fit:cover;' />");
+					sb.Append("</td>");
+					sb.Append("<td style='border:1px solid #ddd; padding:8px;'>" + HttpUtility.HtmlEncode(x.Name) + "</td>");
+					sb.Append("<td style='border:1px solid #ddd; padding:8px; text-align:center;'>" + x.Stock + "</td>");
+					sb.Append("</tr>");
+				}
+
+				// ✅ Thanh cuộn khi danh sách dài
+				string htmlTable = $@"
+	<div style='max-height:300px; overflow-y:auto; text-align:center; margin-top:10px;'>
+		<table style='margin:auto; border-collapse:collapse; width:95%;'>
+			<thead>
+				<tr style='background-color:#f8f8f8;'>
+					<th style='padding:6px 12px;border:1px solid #ddd;'>Hình ảnh</th>
+					<th style='padding:6px 12px;border:1px solid #ddd;'>Tên sản phẩm</th>
+					<th style='padding:6px 12px;border:1px solid #ddd;'>Tồn kho</th>
+				</tr>
+			</thead>
+			<tbody>{sb}</tbody>
+		</table>
+	</div>";
+
+				string script = $@"
+					Swal.fire({{
+						title: 'Danh sách sản phẩm không đủ hàng',
+						html: `{htmlTable}`,
+						icon: 'warning',
+						width: '650px',
+						showCancelButton: true,
+						confirmButtonText: 'Cập nhật giỏ hàng',
+						cancelButtonText: 'Hủy',
+						confirmButtonColor: '#28a745',
+						cancelButtonColor: '#d33',
+						customClass: {{
+							htmlContainer: 'swal-html-scroll'
+						}}
+					}}).then((result) => {{
+						if (result.isConfirmed) {{
+							__doPostBack('{btnUpdateCart.UniqueID}', '');
+						}}
+					}});";
+
+				ScriptManager.RegisterStartupScript(this, this.GetType(), "StockWarning", script, true);
+				return;
+			}
+
+
+
+			// ✅ Nếu đủ hàng
+			Response.Redirect("/Home/Checkout.aspx");
+		}
+
+
+		protected void btnUpdateCart_Click(object sender, EventArgs e)
+		{
+			stockModal.Style["display"] = "none";
+			Session["ToastMessage"] = "Vui lòng cập nhật lại số lượng sản phẩm.";
+			Response.Redirect(Request.RawUrl);
+		}
+		protected void btnCancelCheckout_Click(object sender, EventArgs e)
+		{
+			stockModal.Style["display"] = "none";
+		}
+
 	}
 }

@@ -3,6 +3,8 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Web.UI;
+using System.ComponentModel;
+using System.Web.UI.WebControls;
 
 namespace WebBanLapTop.Home
 {
@@ -167,31 +169,37 @@ namespace WebBanLapTop.Home
 		}
 
 
-		protected string RenderAddToCartButton(int id, int stock)
+		protected string RenderAddToCartButton(int id, int stock, string containerId)
 		{
 			if (stock > 0)
-				return $"<a href='/Home/Cart/Cart.aspx?add={id}' onclick=\"event.preventDefault(); addToCart({id});\" class='btn-add'>Giỏ hàng</a>";
+			{
+				// ✅ Kiểm tra ID vùng chứa để đổi style
+				string class_button = containerId == "FeaturedProductsContent"
+					? "btn-add"
+					: "btn-add-main";
+
+				string hoverColor = containerId == "FeaturedProductsContent" ? "#157347" : "#0b5ed7";
+
+				return $@"
+				<a href='/Home/Cart/Cart.aspx?add={id}'
+				   onclick='event.preventDefault(); addToCart({id});'
+				   class='{class_button}'>
+				   Giỏ hàng
+				</a>";
+			}
 			else
+			{
 				return "<button class='btn-outofstock' disabled>Hết hàng</button>";
+			}
+				
 		}
 
-		protected string TruncateText(object textObj, int maxLength)
-		{
-			if (textObj == null)
-				return string.Empty;
-
-			string text = textObj.ToString();
-			if (text.Length <= maxLength)
-				return text;
-
-			return text.Substring(0, maxLength) + "...";
-		}
 
 		private void LoadFeaturedProducts()
 		{
 			using (SqlConnection conn = new SqlConnection(connStr))
 			{
-				string sql = @"SELECT TOP 2 id, name, description, price, image_url, stock 
+				string sql = @"SELECT TOP 4 id, name, description, price, image_url, stock 
 					   FROM product 
 					   ORDER BY created_at DESC";
 				SqlCommand cmd = new SqlCommand(sql, conn);

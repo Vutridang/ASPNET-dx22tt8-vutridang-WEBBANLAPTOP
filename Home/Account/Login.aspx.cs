@@ -20,6 +20,13 @@ namespace WebBanLapTop.Home
 				Context.ApplicationInstance.CompleteRequest();
 				return;
 			}
+
+			// ==> LUÔN gọi ShowToastFromSession ngay (không phụ thuộc IsPostBack)
+			// đảm bảo toast từ Cart (đã set Session["ToastMessage"]) được hiển thị trên Login
+			if (!IsPostBack)
+			{
+				((Home.SiteMaster)this.Master).ShowToastFromSession(this);
+			}
 		}
 
 		protected void btnLogin_Click(object sender, EventArgs e)
