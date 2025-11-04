@@ -447,7 +447,7 @@ namespace WebBanLapTop
 
 
 			// ✅ Nếu đủ hàng
-			Response.Redirect("/Home/Checkout.aspx");
+			Response.Redirect("/Home/Cart/Checkout.aspx");
 		}
 
 
