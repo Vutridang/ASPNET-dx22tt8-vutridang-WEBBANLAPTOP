@@ -241,7 +241,7 @@
 			border-radius: 5px;
 			font-size: 14px;
 			font-weight: 600;
-			cursor: not-allowed;
+			cursor: pointer;
 			display: inline-block;
 			opacity: 0.9;
 		}
@@ -355,7 +355,7 @@
 			}
 
 		.price-text {
-			display: block;   
+			display: block;
 			font-weight: bold;
 			color: #c00;
 			font-size: 15px;
@@ -417,10 +417,33 @@
 
 					<div class="user_section" runat="server" id="divUserInfo" visible="false">
 						<span class="user_greeting">
-							<asp:Label ID="lblUserNameTop" runat="server" Text=""></asp:Label>
+							<a href="/Home/Account/Edit_User.aspx" class="user-link">
+								<asp:Label ID="lblUserNameTop" runat="server" Text=""></asp:Label>
+							</a>
 						</span>
 						<button type="button" class="btn-cart" runat="server" onserverclick="btnLogout_Click">Đăng xuất</button>
 					</div>
+
+					<style>
+						.user_section {
+							display: flex;
+							align-items: center;
+							gap: 10px;
+						}
+
+						.user-link {
+							color: #0d6efd;
+							font-weight: 600;
+							text-decoration: none;
+							transition: 0.2s;
+						}
+
+							.user-link:hover {
+								color: #0b5ed7;
+								text-decoration: underline;
+							}
+					</style>
+
 
 
 

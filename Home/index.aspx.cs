@@ -3,7 +3,6 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Collections.Generic;
 using System.Web.UI;
-using System.ComponentModel;
 using System.Web.UI.WebControls;
 
 namespace WebBanLapTop.Home
@@ -11,6 +10,19 @@ namespace WebBanLapTop.Home
 	public partial class index : System.Web.UI.Page
 	{
 		string connStr = ConfigurationManager.ConnectionStrings["WebBanLapTopConnection"].ConnectionString;
+		const int PageSize = 4;
+
+		int CurrentPageProducts
+		{
+			get { return ViewState["CurrentPageProducts"] == null ? 1 : (int)ViewState["CurrentPageProducts"]; }
+			set { ViewState["CurrentPageProducts"] = value; }
+		}
+		int CurrentPageBrands
+		{
+			get { return ViewState["CurrentPageBrands"] == null ? 1 : (int)ViewState["CurrentPageBrands"]; }
+			set { ViewState["CurrentPageBrands"] = value; }
+		}
+
 		protected void Page_Load(object sender, EventArgs e)
 		{
 			if (!IsPostBack)
@@ -18,6 +30,7 @@ namespace WebBanLapTop.Home
 				((SiteMaster)this.Master).ShowToastFromSession(this);
 				LoadFeaturedProducts();
 				LoadProducts();
+				LoadBrands();
 
 				// 🟢 Nếu URL có ?add=ID → thêm sản phẩm
 				if (Request.QueryString["add"] != null)
@@ -68,6 +81,113 @@ namespace WebBanLapTop.Home
 			}
 		}
 
+		private void LoadFeaturedProducts()
+		{
+			using (SqlConnection conn = new SqlConnection(connStr))
+			{
+				string sql = "SELECT TOP 4 id, name, description, price, image_url, stock FROM product ORDER BY created_at DESC";
+				SqlCommand cmd = new SqlCommand(sql, conn);
+				conn.Open();
+				rptFeaturedProducts.DataSource = cmd.ExecuteReader();
+				rptFeaturedProducts.DataBind();
+			}
+		}
+
+		private void LoadProducts()
+		{
+			int startRow = (CurrentPageProducts - 1) * PageSize + 1;
+			int endRow = startRow + PageSize - 1;
+
+			using (SqlConnection conn = new SqlConnection(connStr))
+			{
+				string sql = @"
+				WITH ProductPaged AS (
+					SELECT id, name, description, price, image_url, stock,
+					ROW_NUMBER() OVER (ORDER BY created_at DESC) AS RowNum
+					FROM product
+				)
+				SELECT * FROM ProductPaged WHERE RowNum BETWEEN @start AND @end;
+				SELECT COUNT(*) FROM product;";
+
+				SqlCommand cmd = new SqlCommand(sql, conn);
+				cmd.Parameters.AddWithValue("@start", startRow);
+				cmd.Parameters.AddWithValue("@end", endRow);
+				conn.Open();
+
+				SqlDataReader reader = cmd.ExecuteReader();
+				rptProducts.DataSource = reader;
+				rptProducts.DataBind();
+
+				if (reader.NextResult() && reader.Read())
+				{
+					int total = reader.GetInt32(0);
+					int totalPages = (int)Math.Ceiling(total / (double)PageSize);
+					lblPageProducts.Text = "Trang " + CurrentPageProducts + " / " + totalPages;
+					btnPrevProducts.Enabled = CurrentPageProducts > 1;
+					btnNextProducts.Enabled = CurrentPageProducts < totalPages;
+				}
+			}
+		}
+
+		private void LoadBrands()
+		{
+			int startRow = (CurrentPageBrands - 1) * PageSize + 1;
+			int endRow = startRow + PageSize - 1;
+
+			using (SqlConnection conn = new SqlConnection(connStr))
+			{
+				string sql = @"
+				WITH BrandPaged AS (
+					SELECT id, name, logo_url, description, is_top,
+					ROW_NUMBER() OVER (ORDER BY is_top DESC, id ASC) AS RowNum
+					FROM brand
+				)
+				SELECT * FROM BrandPaged WHERE RowNum BETWEEN @start AND @end;
+				SELECT COUNT(*) FROM brand;";
+
+				SqlCommand cmd = new SqlCommand(sql, conn);
+				cmd.Parameters.AddWithValue("@start", startRow);
+				cmd.Parameters.AddWithValue("@end", endRow);
+				conn.Open();
+
+				SqlDataReader reader = cmd.ExecuteReader();
+				rptBrands.DataSource = reader;
+				rptBrands.DataBind();
+
+				if (reader.NextResult() && reader.Read())
+				{
+					int total = reader.GetInt32(0);
+					int totalPages = (int)Math.Ceiling(total / (double)PageSize);
+					lblPageBrands.Text = "Trang " + CurrentPageBrands + " / " + totalPages;
+					btnPrevBrands.Enabled = CurrentPageBrands > 1;
+					btnNextBrands.Enabled = CurrentPageBrands < totalPages;
+				}
+			}
+		}
+
+		// 🔹 Sự kiện nút phân trang
+		protected void btnPrevProducts_Click(object sender, EventArgs e)
+		{
+			if (CurrentPageProducts > 1) CurrentPageProducts--;
+			LoadProducts();
+		}
+		protected void btnNextProducts_Click(object sender, EventArgs e)
+		{
+			CurrentPageProducts++;
+			LoadProducts();
+		}
+		protected void btnPrevBrands_Click(object sender, EventArgs e)
+		{
+			if (CurrentPageBrands > 1) CurrentPageBrands--;
+			LoadBrands();
+		}
+		protected void btnNextBrands_Click(object sender, EventArgs e)
+		{
+			CurrentPageBrands++;
+			LoadBrands();
+		}
+
+		// 🧩 Thêm sản phẩm vào giỏ hàng (Session hoặc DB)
 		// 🧩 Thêm sản phẩm vào giỏ hàng (Session hoặc DB)
 		private CartItem AddToCart(int productId)
 		{
@@ -169,68 +289,14 @@ namespace WebBanLapTop.Home
 		}
 
 
+
+
 		protected string RenderAddToCartButton(int id, int stock, string containerId)
 		{
 			if (stock > 0)
-			{
-				// ✅ Kiểm tra ID vùng chứa để đổi style
-				string class_button = containerId == "FeaturedProductsContent"
-					? "btn-add"
-					: "btn-add-main";
-
-				string hoverColor = containerId == "FeaturedProductsContent" ? "#157347" : "#0b5ed7";
-
-				return $@"
-				<a href='/Home/Cart/Cart.aspx?add={id}'
-				   onclick='event.preventDefault(); addToCart({id});'
-				   class='{class_button}'>
-				   Giỏ hàng
-				</a>";
-			}
+				return "<a href='/Home/Cart/Cart.aspx?add=" + id + "' onclick='event.preventDefault(); addToCart(" + id + ");' style=\"background:#198754;color:white;padding:6px 12px;border-radius:4px;\">Giỏ hàng</a>";
 			else
-			{
-				return "<button class='btn-outofstock' disabled>Hết hàng</button>";
-			}
-				
+				return "<button disabled style=\"background:#ccc;color:#666;padding:6px 12px;border-radius:4px;\">Hết hàng</button>";
 		}
-
-
-		private void LoadFeaturedProducts()
-		{
-			using (SqlConnection conn = new SqlConnection(connStr))
-			{
-				string sql = @"SELECT TOP 4 id, name, description, price, image_url, stock 
-					   FROM product 
-					   ORDER BY created_at DESC";
-				SqlCommand cmd = new SqlCommand(sql, conn);
-				conn.Open();
-
-				using (SqlDataReader reader = cmd.ExecuteReader())
-				{
-					rptFeaturedProducts.DataSource = reader;
-					rptFeaturedProducts.DataBind();
-				}
-			}
-		}
-
-		private void LoadProducts()
-		{
-			using (SqlConnection conn = new SqlConnection(connStr))
-			{
-				string sql = @"SELECT TOP 4 id, name, description, price, image_url, stock 
-					   FROM product 
-					   ORDER BY created_at DESC";
-				SqlCommand cmd = new SqlCommand(sql, conn);
-				conn.Open();
-
-				using (SqlDataReader reader = cmd.ExecuteReader())
-				{
-					rptProducts.DataSource = reader;
-					rptProducts.DataBind();
-				}
-			}
-		}
-
-
 	}
 }

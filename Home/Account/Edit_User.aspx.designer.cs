@@ -7,39 +7,48 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebBanLapTop.Home
+namespace WebBanLapTop.Home.Account
 {
 
 
-	public partial class ProductByCategory
+	public partial class Edit_User
 	{
 
 		/// <summary>
-		/// lblCategoryName control.
+		/// txtUsername control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblCategoryName;
+		protected global::System.Web.UI.WebControls.TextBox txtUsername;
 
 		/// <summary>
-		/// rptProductsByCategory control.
+		/// txtEmail control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Repeater rptProductsByCategory;
+		protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
 		/// <summary>
-		/// lblNoResults control.
+		/// btnSave control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.Label lblNoResults;
+		protected global::System.Web.UI.WebControls.Button btnSave;
+
+		/// <summary>
+		/// gvOrders control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.GridView gvOrders;
 
 		/// <summary>
 		/// btnPrev control.
@@ -67,5 +76,32 @@ namespace WebBanLapTop.Home
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.LinkButton btnNext;
+
+		/// <summary>
+		/// orderModal control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl orderModal;
+
+		/// <summary>
+		/// tblOrderItems control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.HtmlControls.HtmlGenericControl tblOrderItems;
+
+		/// <summary>
+		/// btnCloseModal control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Button btnCloseModal;
 	}
 }

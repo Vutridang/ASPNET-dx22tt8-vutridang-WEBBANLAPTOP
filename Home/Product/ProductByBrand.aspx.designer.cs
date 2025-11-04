@@ -7,21 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebBanLapTop.Admin.Order
+namespace WebBanLapTop.Home
 {
 
 
-	public partial class Order
+	public partial class ProductByBrand
 	{
 
 		/// <summary>
-		/// gvOrders control.
+		/// lblBrandName control.
 		/// </summary>
 		/// <remarks>
 		/// Auto-generated field.
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
-		protected global::System.Web.UI.WebControls.GridView gvOrders;
+		protected global::System.Web.UI.WebControls.Label lblBrandName;
+
+		/// <summary>
+		/// rptProductsByBrand control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Repeater rptProductsByBrand;
+
+		/// <summary>
+		/// lblNoResults control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.Label lblNoResults;
 
 		/// <summary>
 		/// btnPrev control.

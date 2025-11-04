@@ -35,4 +35,10 @@
 			</asp:TemplateField>
 		</Columns>
 	</asp:GridView>
+	<!-- ✅ Phân trang -->
+	<div class="pagination text-center">
+		<asp:LinkButton ID="btnPrev" runat="server" CssClass="btn btn-success btn-sm" OnClick="btnPrev_Click">« Trước</asp:LinkButton>
+		<asp:Label ID="lblPageInfo" runat="server" CssClass="mx-2" />
+		<asp:LinkButton ID="btnNext" runat="server" CssClass="btn btn-success btn-sm" OnClick="btnNext_Click">Sau »</asp:LinkButton>
+	</div>
 </asp:Content>

@@ -114,5 +114,52 @@
 			.button span:hover a.details {
 				color: #000;
 			}
+
+		/* --- Pagination styling --- */
+		.pagination-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 12px;
+			margin-top: 25px;
+		}
+
+		.btn-pagination {
+			background-color: #28a745;
+			color: #fff !important;
+			border: none;
+			padding: 6px 16px;
+			border-radius: 25px;
+			font-weight: 500;
+			transition: all 0.2s ease;
+			cursor: pointer;
+		}
+
+			.btn-pagination:hover {
+				background-color: #218838;
+				transform: translateY(-1px);
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+			}
+
+			.btn-pagination:disabled,
+			.btn-pagination[disabled] {
+				opacity: 0.6;
+				cursor: not-allowed;
+				background-color: #6c757d !important;
+			}
+
+		.page-info {
+			font-weight: 600;
+			color: #333;
+			font-size: 15px;
+			min-width: 100px;
+			text-align: center;
+		}
 	</style>
+	<!-- ✅ Phân trang -->
+	<div class="pagination-wrapper text-center mt-4">
+		<asp:LinkButton ID="btnPrev" runat="server" CssClass="btn-pagination" OnClick="btnPrev_Click">« Trước</asp:LinkButton>
+		<asp:Label ID="lblPageInfo" runat="server" CssClass="page-info" />
+		<asp:LinkButton ID="btnNext" runat="server" CssClass="btn-pagination" OnClick="btnNext_Click">Sau »</asp:LinkButton>
+	</div>
 </asp:Content>

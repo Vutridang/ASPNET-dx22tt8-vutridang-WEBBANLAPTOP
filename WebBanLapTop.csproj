@@ -72,6 +72,7 @@
     <Content Include="Admin\User\Delete_User.aspx" />
     <Content Include="Admin\User\Edit_User.aspx" />
     <Content Include="Admin\Site.Master" />
+    <Content Include="Home\Account\Edit_User.aspx" />
     <Content Include="Home\Cart\Cart.aspx" />
     <Content Include="Home\Cart\Checkout.aspx" />
     <Content Include="Home\Contact\Contact.aspx" />
@@ -79,6 +80,7 @@
     <Content Include="Home\Account\Login.aspx" />
     <Content Include="Home\Mail\Mail.aspx" />
     <Content Include="Home\Product\Product.aspx" />
+    <Content Include="Home\Product\ProductByBrand.aspx" />
     <Content Include="Home\Product\ProductByCategory.aspx" />
     <Content Include="Home\Product\ProductDetail.aspx" />
     <Content Include="Home\Account\Register.aspx" />
@@ -246,6 +248,13 @@
     <Compile Include="Admin\User\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Home\Account\Edit_User.aspx.cs">
+      <DependentUpon>Edit_User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Account\Edit_User.aspx.designer.cs">
+      <DependentUpon>Edit_User.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home\Cart\Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -294,6 +303,13 @@
     </Compile>
     <Compile Include="Home\Product\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Product\ProductByBrand.aspx.cs">
+      <DependentUpon>ProductByBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Product\ProductByBrand.aspx.designer.cs">
+      <DependentUpon>ProductByBrand.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home\Product\ProductByCategory.aspx.cs">
       <DependentUpon>ProductByCategory.aspx</DependentUpon>

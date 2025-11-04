@@ -1,19 +1,22 @@
-﻿<%@ Page Title="Kết quả tìm kiếm" Language="C#" MasterPageFile="~/Home/Site.Master"
-    AutoEventWireup="true" CodeBehind="SearchProduct.aspx.cs"
-    Inherits="WebBanLapTop.Home.SearchProduct" %>
+﻿<%@ Page Title="Sản phẩm theo thương hiệu" Language="C#" MasterPageFile="~/Home/Site.Master"
+    AutoEventWireup="true" CodeBehind="ProductByBrand.aspx.cs"
+    Inherits="WebBanLapTop.Home.ProductByBrand" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="main">
         <div class="content">
+            <!-- Tiêu đề thương hiệu -->
             <div class="content_top">
                 <div class="heading">
-                    <h3>Kết quả tìm kiếm</h3>
+                    <h3>
+                        <asp:Label ID="lblBrandName" runat="server" Text="Thương hiệu sản phẩm"></asp:Label>
+                    </h3>
                 </div>
                 <div class="clear"></div>
             </div>
 
             <!-- Danh sách sản phẩm -->
-            <asp:Repeater ID="rptSearchResults" runat="server">
+            <asp:Repeater ID="rptProductsByBrand" runat="server">
                 <ItemTemplate>
                     <div class="grid_1_of_4 images_1_of_4">
                         <a href='<%# "ProductDetail.aspx?id=" + Eval("id") %>'>
@@ -30,22 +33,24 @@
                 </ItemTemplate>
             </asp:Repeater>
 
-            <!-- Không có kết quả -->
+            <!-- Thông báo khi không có sản phẩm -->
             <asp:Label ID="lblNoResults" runat="server"
-                Text="Không tìm thấy sản phẩm nào phù hợp."
+                Text="Không có sản phẩm nào thuộc thương hiệu này."
                 Visible="false"
                 CssClass="no-results" />
 
             <!-- ✅ Phân trang -->
             <div class="pagination-wrapper text-center mt-4">
-                <asp:LinkButton ID="btnPrev" runat="server" CssClass="btn-pagination" OnClick="btnPrev_Click">« Trước</asp:LinkButton>
+                <asp:LinkButton ID="btnPrev" runat="server"
+                    CssClass="btn-pagination" OnClick="btnPrev_Click">« Trước</asp:LinkButton>
                 <asp:Label ID="lblPageInfo" runat="server" CssClass="page-info" />
-                <asp:LinkButton ID="btnNext" runat="server" CssClass="btn-pagination" OnClick="btnNext_Click">Sau »</asp:LinkButton>
+                <asp:LinkButton ID="btnNext" runat="server"
+                    CssClass="btn-pagination" OnClick="btnNext_Click">Sau »</asp:LinkButton>
             </div>
         </div>
     </div>
 
-    <!-- ✅ CSS -->
+    <!-- ✅ CSS (giống ProductByCategory) -->
     <style>
         .grid_1_of_4 {
             float: left;
@@ -85,17 +90,6 @@
             color: #c00;
             font-weight: bold;
         }
-
-/*        .button .details {
-            display: inline-block;
-            background-color: #007bff;
-            color: #fff !important;
-            padding: 5px 14px;
-            border-radius: 4px;
-            font-size: 13px;
-            text-transform: uppercase;
-            transition: 0.2s;
-        }*/
 
         .button .details:hover {
             background-color: #0056b3;

@@ -9,6 +9,13 @@ namespace WebBanLapTop.Admin.Category
 	{
 		// Connection string ở class-level
 		private string connStr;
+		private int pageSize = 10;
+
+		private int CurrentPage
+		{
+			get { return (int)(ViewState["CurrentPage"] ?? 1); }
+			set { ViewState["CurrentPage"] = value; }
+		}
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -33,7 +40,7 @@ namespace WebBanLapTop.Admin.Category
 				((SiteMaster)this.Master).ShowToastFromSession(this);
 
 				// Load danh sách Category
-				LoadCategories();
+				LoadCategories(1);
 
 				// Set tên Admin lên MasterPage
 				SetAdminNameFromSession();
@@ -59,27 +66,73 @@ namespace WebBanLapTop.Admin.Category
 		/// <summary>
 		/// Load danh sách Category lên GridView
 		/// </summary>
-		private void LoadCategories()
+		private void LoadCategories(int page)
 		{
-			if (gvCategory == null) return; // GridView null-safe
-
 			try
 			{
 				using (SqlConnection conn = new SqlConnection(connStr))
 				{
-					string sql = "SELECT * FROM category ORDER BY id DESC";
-					SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-					DataTable dt = new DataTable();
-					da.Fill(dt);
+					conn.Open();
 
-					gvCategory.DataSource = dt.Rows.Count > 0 ? dt : null;
-					gvCategory.DataBind();
+					// 1️⃣ Đếm tổng số danh mục
+					int totalRecords = 0;
+					using (SqlCommand countCmd = new SqlCommand("SELECT COUNT(*) FROM [category]", conn))
+					{
+						totalRecords = (int)countCmd.ExecuteScalar();
+					}
+
+					int totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
+					if (totalPages == 0) totalPages = 1;
+
+					// 2️⃣ Lấy danh mục theo trang
+					string sql = @"
+                        SELECT id, category_name, created_at, updated_at
+                        FROM [category]
+                        ORDER BY id DESC
+                        OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY;
+                    ";
+
+					int offset = (page - 1) * pageSize;
+
+					using (SqlCommand cmd = new SqlCommand(sql, conn))
+					{
+						cmd.Parameters.AddWithValue("@Offset", offset);
+						cmd.Parameters.AddWithValue("@PageSize", pageSize);
+
+						using (SqlDataReader reader = cmd.ExecuteReader())
+						{
+							DataTable dt = new DataTable();
+							dt.Load(reader);
+							gvCategory.DataSource = dt.Rows.Count > 0 ? dt : null;
+							gvCategory.DataBind();
+						}
+					}
+
+					// 3️⃣ Cập nhật thông tin phân trang
+					lblPageInfo.Text = "Trang " + page + " / " + totalPages;
+					btnPrev.Enabled = (page > 1);
+					btnNext.Enabled = (page < totalPages);
 				}
 			}
 			catch (Exception ex)
 			{
 				throw new Exception("Lỗi khi load dữ liệu Category: " + ex.Message);
 			}
+		}
+
+		protected void btnPrev_Click(object sender, EventArgs e)
+		{
+			if (CurrentPage > 1)
+			{
+				CurrentPage--;
+				LoadCategories(CurrentPage);
+			}
+		}
+
+		protected void btnNext_Click(object sender, EventArgs e)
+		{
+			CurrentPage++;
+			LoadCategories(CurrentPage);
 		}
 	}
 }
