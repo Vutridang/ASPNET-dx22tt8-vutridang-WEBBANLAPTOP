@@ -1,0 +1,7 @@
+# Ignore Visual Studio build and cache folders
+.vs/
+bin/
+obj/
+# .vs/	Thư mục cache của Visual Studio, chứa cài đặt IDE cá nhân
+# bin/	Chứa file build (.dll, .exe), VS tự sinh lại khi chạy
+# obj/	File trung gian khi biên dịch, VS tự tạo
