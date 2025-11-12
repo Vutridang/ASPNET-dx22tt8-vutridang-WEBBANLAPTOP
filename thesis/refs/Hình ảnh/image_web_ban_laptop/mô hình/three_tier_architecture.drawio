@@ -1,0 +1,50 @@
+<mxfile host="app.diagrams.net" modified="2025-11-12T00:00:00.000Z" agent="ChatGPT" version="24.0.2" editor="ChatGPT" type="device">
+  <diagram name="Three_Tier_Architecture">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Presentation Layer -->
+        <mxCell id="2" value="Presentation Layer
+(Giao diện người dùng: ASP.NET Web Forms, Bootstrap)
+- Các trang .aspx
+- HTML / CSS / JavaScript / jQuery" 
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="600" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Business Logic Layer -->
+        <mxCell id="3" value="Business Logic Layer
+(Xử lý nghiệp vụ, điều hướng dữ liệu, kiểm tra hợp lệ)
+- Các lớp .cs xử lý logic
+- Kiểm tra tài khoản, tính tổng giỏ hàng, xác nhận đơn" 
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="200" width="600" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Data Access Layer -->
+        <mxCell id="4" value="Data Access Layer
+(Tương tác CSDL thông qua ADO.NET và SQL Server)
+- Câu lệnh SELECT / INSERT / UPDATE / DELETE
+- Thủ tục (nếu có)" 
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="360" width="600" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- SQL Server -->
+        <mxCell id="5" value="SQL Server
+(Lưu trữ bảng: user, product, cart, order, v.v.)" 
+          style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="520" width="600" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="6" edge="1" source="2" target="3" style="endArrow=block;strokeColor=#000000;rounded=1;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="7" edge="1" source="3" target="4" style="endArrow=block;strokeColor=#000000;rounded=1;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="8" edge="1" source="4" target="5" style="endArrow=block;strokeColor=#000000;rounded=1;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

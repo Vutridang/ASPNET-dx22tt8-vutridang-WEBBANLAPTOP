@@ -1,0 +1,45 @@
+<mxfile host="app.diagrams.net" modified="2025-11-12T00:00:00.000Z" agent="ChatGPT" version="24.0.2" editor="ChatGPT" type="device">
+  <diagram name="Flow_AddBrand">
+    <mxGraphModel dx="1000" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="2" value="[Admin nhấn 'Thêm Thương Hiệu']" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="220" y="20" width="400" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="Nhập thông tin → Upload Logo → Nhấn Lưu" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="420" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Kiểm tra dữ liệu đầu vào" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="220" y="180" width="320" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Nếu thiếu tên → Báo lỗi" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Lưu logo → INSERT INTO brand" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="400" y="260" width="360" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="Session['ToastMessage'] = 'Thêm thương hiệu thành công!'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="340" width="480" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="Chuyển về Brand.aspx" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="460" y="420" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="[Kết thúc luồng]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="480" y="500" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="10" edge="1" source="2" target="3" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="11" edge="1" source="3" target="4" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="12" edge="1" source="4" target="5" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="13" edge="1" source="4" target="6" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="14" edge="1" source="6" target="7" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="15" edge="1" source="7" target="8" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="16" edge="1" source="8" target="9" style="endArrow=block;strokeColor=#000000;" parent="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

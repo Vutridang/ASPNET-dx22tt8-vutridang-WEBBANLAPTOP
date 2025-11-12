@@ -1,0 +1,6 @@
+[1] https://learn.microsoft.com/en-us/aspnet/web-forms
+[2] https://learn.microsoft.com/en-us/dotnet/framework/data/adonet
+[3] https://www.w3schools.com
+[4] https://getbootstrap.com/docs/4.6
+[5] https://mailtrap.io
+[6] https://learn.microsoft.com/en-us/sql/t-sql
