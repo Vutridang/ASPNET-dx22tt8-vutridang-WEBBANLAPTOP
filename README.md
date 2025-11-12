@@ -40,7 +40,7 @@ ASPNET-dx22tt8-vutridang-WEBBANLAPTOP/
 │   └── WebBanLaptop.sln
 │
 ├── progress-report/              # Báo cáo tiến độ hàng tuần (bắt buộc theo quy định)
-│   └── report-week01.pdf
+│   └── progress-report-tuần1-3.pdf
 │
 ├── thesis/                       # Thư mục tài liệu đồ án (bắt buộc)
 │   ├── doc/                      # Báo cáo gốc (.docx)
