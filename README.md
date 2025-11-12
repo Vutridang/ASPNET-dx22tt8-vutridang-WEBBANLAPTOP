@@ -64,11 +64,12 @@ ASPNET-dx22tt8-vutridang-WEBBANLAPTOP/
 
 ---
 
+
+   ```
 ## 4. Cách cài đặt và chạy  
 1. Clone repository:  
    ```bash
    git clone https://github.com/Vutridang/ASPNET-dx22tt8-vutridang-WEBBANLAPTOP.git
-   ```
 2. Mở project bằng **Visual Studio 2022**.  
 3. Kiểm tra file **Web.config** → chỉnh lại `connectionString` trỏ đến SQL Server cục bộ của bạn.  
 4. Tạo database WebBanLapTop -> click new query -> copy paste script file `WebBanLapTop.sql` -> click execute.  
