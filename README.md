@@ -18,7 +18,7 @@ Dự án cung cấp hệ thống quản lý sản phẩm, người dùng, giỏ 
 ---
 
 ## 2. Công nghệ sử dụng  
-- **Ngôn ngữ lập trình:** C#, ASP.NET Framework 4.7.2  
+- **Ngôn ngữ lập trình:** C#, ASP.NET Framework 3.5  
 - **CSDL:** Microsoft SQL Server  
 - **Giao diện:** HTML, CSS, Bootstrap, JavaScript  
 - **Công cụ:** Visual Studio 2022, SQL Server, GitHub  
