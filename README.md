@@ -31,7 +31,7 @@ ASPNET-dx22tt8-vutridang-WEBBANLAPTOP/
 │
 ├── setup/                       # (Tuỳ chọn) Các tập tin cài đặt hoặc dữ liệu thử
 │
-├── scr/                         # Mã nguồn (source code) của hệ thống Web ASP.NET
+├── src/                         # Mã nguồn (source code) của hệ thống Web ASP.NET
 │   ├── Controllers/
 │   ├── Models/
 │   ├── Views/
