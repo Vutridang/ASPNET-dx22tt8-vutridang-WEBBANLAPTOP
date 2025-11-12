@@ -103,3 +103,4 @@ Nhập đường dẫn: https://localhost:44343/Home/Account/Login.aspx để đ
 - Email: dangvu8244@gmail.com  
 - GitHub: https://github.com/Vutridang
 - Điện thoại: 0788388749
+- Link video thuyết trình: https://drive.google.com/file/d/1dpDEBDDC7JpJqX-kXYEDHXEGHYcWACCA/view?usp=drive_link
