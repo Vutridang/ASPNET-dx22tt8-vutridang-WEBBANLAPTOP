@@ -72,16 +72,17 @@ ASPNET-dx22tt8-vutridang-WEBBANLAPTOP/
    git clone https://github.com/Vutridang/ASPNET-dx22tt8-vutridang-WEBBANLAPTOP.git
 2. Mở project bằng **Visual Studio 2022**.  
 3. Kiểm tra file **Web.config** → chỉnh lại `connectionString` trỏ đến SQL Server cục bộ của bạn.  
-4. Tạo database WebBanLapTop -> click new query -> copy paste script file `WebBanLapTop.sql` -> click execute.  
-5. Chạy chương trình bằng `IIS Express` hoặc `Ctrl + F5`.
+4. Tạo database WebBanLapTop -> click new query -> copy paste script file `WebBanLapTop.sql` -> click execute.
+5. Click chuột phải vào file Home/index.aspx -> chọn Set as Start Page  
+6. Chạy chương trình bằng `IIS Express` hoặc `Ctrl + F5`.
    
 Nhập đường dẫn: https://localhost:44343/Admin/Login.aspx để vào trang Admin -> sử dụng tài khoản mẫu Admin để đăng nhập vào trang quản trị
 
-Nhập đường dẫn: https://localhost:44343/Home/Account/Login.aspx để đăng nhập trang chủ -> sử dụng tài khoản mẫu Admin/User để đăng nhập và test tính năng thanh toán 
-
 **Tài khoản mẫu:**  
 - Admin: `admin` / `12345678`  
-- User: `customer1` / `12345678`  
+- User: `customer1` / `12345678`
+
+Video setup dự án WebBanLapTop trên Visual Studio và Sql Server: https://www.youtube.com/watch?v=caGwDusFJEQ
 
 ---
 
