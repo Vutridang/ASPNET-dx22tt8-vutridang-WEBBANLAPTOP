@@ -75,7 +75,7 @@ ASPNET-dx22tt8-vutridang-WEBBANLAPTOP/
 4. Tạo database WebBanLapTop -> click new query -> copy paste script file `WebBanLapTop.sql` -> click execute.  
 5. Chạy chương trình bằng `IIS Express` hoặc `Ctrl + F5`.
    
-Nhập đường dân: https://localhost:44343/Admin/Login.aspx để vào trang Admin -> sử dụng tài khoản mẫu Admin để đăng nhập vào trang quản trị
+Nhập đường dẫn: https://localhost:44343/Admin/Login.aspx để vào trang Admin -> sử dụng tài khoản mẫu Admin để đăng nhập vào trang quản trị
 
 Nhập đường dẫn: https://localhost:44343/Home/Account/Login.aspx để đăng nhập trang chủ -> sử dụng tài khoản mẫu Admin/User để đăng nhập và test tính năng thanh toán 
 
