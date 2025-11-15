@@ -70,13 +70,39 @@ ASPNET-dx22tt8-vutridang-WEBBANLAPTOP/
 1. Clone repository:  
    ```bash
    git clone https://github.com/Vutridang/ASPNET-dx22tt8-vutridang-WEBBANLAPTOP.git
-2. Mở project bằng **Visual Studio 2022**.  
-3. Kiểm tra file **Web.config** → chỉnh lại `connectionString` trỏ đến SQL Server cục bộ của bạn.  
+---
+<img width="1920" height="1081" alt="h1" src="https://github.com/user-attachments/assets/a8d2770a-e18b-47c7-830f-322a0d05f59d" />
+
+2. Mở project bằng **Visual Studio 2022**.
+---   
+<img width="1920" height="1081" alt="h2" src="https://github.com/user-attachments/assets/b71834cb-a364-4f58-b1d9-08c01f5a1fc5" />
+
+3. Kiểm tra file **Web.config** → chỉnh lại `connectionString` trỏ đến SQL Server cục bộ của bạn.
+---
+<img width="1920" height="1081" alt="h3" src="https://github.com/user-attachments/assets/feb28529-91cb-4e7f-8ad7-803e04975318" />
+<img width="1920" height="1081" alt="h4" src="https://github.com/user-attachments/assets/345e6fd4-3754-4ba0-aaec-cb5fcda71535" />
+
 4. Tạo database WebBanLapTop -> click new query -> copy paste script file `WebBanLapTop.sql` -> click execute.
-5. Click chuột phải vào file Home/index.aspx -> chọn Set as Start Page  
+---
+<img width="1920" height="1081" alt="h5" src="https://github.com/user-attachments/assets/ec0c9e49-ae2b-4a46-9153-e1879fc8dec8" />
+<img width="1920" height="1081" alt="h6" src="https://github.com/user-attachments/assets/6696bd71-7d80-424d-8ecf-498124248b90" />
+
+5. Click chuột phải vào file Home/index.aspx -> chọn Set as Start Page
+---
+<img width="1920" height="1081" alt="h7" src="https://github.com/user-attachments/assets/2e212edc-a04c-4c64-bcd6-6f56adcd384c" />
+
 6. Chạy chương trình bằng `IIS Express` hoặc `Ctrl + F5`.
-   
+---
+<img width="1920" height="1081" alt="h8" src="https://github.com/user-attachments/assets/be0c7d51-0840-428c-b986-bace9ef5fcf9" />
+
+Kết quả
+---
+<img width="1920" height="1081" alt="h9" src="https://github.com/user-attachments/assets/f54a2507-ce9b-4563-853a-f5a51da9f7d5" />
+<img width="1920" height="1081" alt="h10" src="https://github.com/user-attachments/assets/f7eee629-c1dd-4b86-84b2-f7b984bfbd2c" />
+
 Nhập đường dẫn: https://localhost:44343/Admin/Login.aspx để vào trang Admin -> sử dụng tài khoản mẫu Admin để đăng nhập vào trang quản trị
+---
+<img width="1920" height="1081" alt="a" src="https://github.com/user-attachments/assets/878ecf29-b1d7-48e0-800c-d406b6850d33" />
 
 **Tài khoản mẫu:**  
 - Admin: `admin` / `12345678`  
